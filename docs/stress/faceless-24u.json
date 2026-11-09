@@ -1,0 +1,27 @@
+{
+ "app": "faceless",
+ "users": 24,
+ "concurrency": 8,
+ "actionsPerBot": 50,
+ "seed": 1,
+ "totalActions": 1160,
+ "secs": 18.8,
+ "actionsPerSec": 61.6,
+ "latencyMs": {
+  "p50": 25,
+  "p95": 33,
+  "p99": 37,
+  "max": 54
+ },
+ "peakChromeRssMB": 2014,
+ "slowActions": 0,
+ "noTargets": 40,
+ "invariantViolations": 1,
+ "jsErrors": 0,
+ "crashes": 0,
+ "invariantSamples": [
+  "XSS after idea-add"
+ ],
+ "errorSamples": [],
+ "crashSamples": []
+}

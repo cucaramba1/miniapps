@@ -1,0 +1,25 @@
+{
+ "app": "faceless",
+ "users": 40,
+ "concurrency": 8,
+ "actionsPerBot": 60,
+ "seed": 2,
+ "totalActions": 2333,
+ "secs": 33.4,
+ "actionsPerSec": 70,
+ "latencyMs": {
+  "p50": 24,
+  "p95": 32,
+  "p99": 34,
+  "max": 77
+ },
+ "peakChromeRssMB": 2186,
+ "slowActions": 0,
+ "noTargets": 67,
+ "invariantViolations": 0,
+ "jsErrors": 0,
+ "crashes": 0,
+ "invariantSamples": [],
+ "errorSamples": [],
+ "crashSamples": []
+}

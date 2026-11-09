@@ -1,0 +1,118 @@
+/* Pastel minimal design system for Telegram mini-apps.
+   Tokens first; the app reads Telegram themeParams only for light/dark choice. */
+:root{
+  /* нижний инсет: iPhone (env) или Telegram 8.0+ (--tg-safe-area-inset-bottom), берём больший, плюс инсет контента Telegram */
+  --sab:calc(max(env(safe-area-inset-bottom,0px), var(--tg-safe-area-inset-bottom,0px)) + var(--tg-content-safe-area-inset-bottom,0px));
+  --bg:#FAF7F2; --surface:#FFFFFF; --surface-2:#F3EFE8; --line:#ECE6DC;
+  --ink:#2A2831; --ink-2:#55526A; --muted:#6B677A;
+  --mint:#CFEBDD; --mint-ink:#2F6B52;
+  --lav:#DDD7F6;  --lav-ink:#50479A;
+  --peach:#FFDDCB; --peach-ink:#9A4F2B;
+  --sky:#D4E8F8;  --sky-ink:#2F6290;
+  --butter:#FFF1C4; --butter-ink:#7A5C0C;
+  --rose:#F9D6E0; --rose-ink:#9B3557;
+  --accent:#6B5DD3; --accent-ink:#FFFFFF; --accent-soft:var(--lav);
+  --ok:#5FB58E; --warn:#E3A93C; --bad:#E07A8F;
+  --r-s:12px; --r-m:18px; --r-l:26px; --tap:48px;
+  --shadow:0 1px 2px rgba(42,40,49,.04),0 8px 24px rgba(42,40,49,.06);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+:root[data-theme="dark"]{
+  --bg:#1D1C23; --surface:#27262F; --surface-2:#2F2E38; --line:#3A3945;
+  --ink:#F1EFF6; --ink-2:#C5C2D1; --muted:#9A97A8;
+  --mint:#2E4A3F; --mint-ink:#BFE8D3;
+  --lav:#3B3763;  --lav-ink:#D7D1FA;
+  --peach:#5A3E31; --peach-ink:#FFD3BC;
+  --sky:#2C4258;  --sky-ink:#C6E3F8;
+  --butter:#554A25; --butter-ink:#FFEDB0;
+  --rose:#573340; --rose-ink:#F9CFDC;
+  --accent:#A99EF2; --accent-ink:#1D1C23;
+  --shadow:0 1px 2px rgba(0,0,0,.2),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;overscroll-behavior:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+h1,h2,h3,p{margin:0}
+h1{font-size:26px;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+h2{font-size:19px;letter-spacing:-.01em;font-weight:650}
+h3{font-size:16px;font-weight:600}
+.muted{color:var(--muted)} .sm{font-size:13px} .xs{font-size:12px}
+.row{display:flex;align-items:center;gap:10px} .col{display:flex;flex-direction:column;gap:12px}
+.grow{flex:1} .between{justify-content:space-between} .wrap{flex-wrap:wrap}
+
+/* app shell */
+#phone{height:100%;position:relative}
+#app{position:relative;height:100%;display:flex;flex-direction:column;overflow:hidden;background:var(--bg)}
+.screen{position:absolute;inset:0;bottom:0;overflow-y:auto;overflow-x:hidden;padding:16px 16px 120px;
+  opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .22s var(--ease),transform .22s var(--ease);visibility:hidden}
+.screen.on{opacity:1;transform:none;pointer-events:auto;visibility:visible}
+.screen.has-tabs{padding-bottom:calc(140px + var(--sab))}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.back{width:40px;height:40px;border-radius:50%;background:var(--surface);box-shadow:var(--shadow);display:grid;place-items:center;font-size:18px}
+
+/* surfaces */
+.card{background:var(--surface);border-radius:var(--r-l);box-shadow:var(--shadow);padding:16px;transition:transform .15s var(--ease)}
+.card.tap:active,.btn:active,.chip:active,.tab:active{transform:scale(.97)}
+.pad0{padding:0;overflow:hidden}
+.pill{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:99px;font-size:12px;font-weight:600;white-space:nowrap}
+.p-mint{background:var(--mint);color:var(--mint-ink)} .p-lav{background:var(--lav);color:var(--lav-ink)}
+.p-peach{background:var(--peach);color:var(--peach-ink)} .p-sky{background:var(--sky);color:var(--sky-ink)}
+.p-butter{background:var(--butter);color:var(--butter-ink)} .p-rose{background:var(--rose);color:var(--rose-ink)}
+
+/* controls */
+.btn{min-height:var(--tap);padding:0 20px;border-radius:var(--r-m);background:var(--accent);color:var(--accent-ink);font-weight:650;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .15s var(--ease),opacity .2s}
+.btn.soft{background:var(--accent-soft);color:var(--lav-ink)} .btn.ghost{background:var(--surface-2);color:var(--ink)}
+.btn.block{width:100%} .btn[disabled]{opacity:.45;pointer-events:none}
+.chip{min-height:36px;padding:0 14px;border-radius:99px;background:var(--surface);box-shadow:inset 0 0 0 1.5px var(--line);font-size:14px;
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:all .18s var(--ease)}
+.chip.on{background:var(--lav);color:var(--lav-ink);box-shadow:inset 0 0 0 1.5px transparent;font-weight:600}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none} .chips::-webkit-scrollbar{display:none}
+.input{width:100%;min-height:var(--tap);border-radius:var(--r-m);border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:0 14px;font:inherit}
+.input:focus{outline:2px solid var(--accent);outline-offset:1px}
+input[type=range]{width:100%;accent-color:var(--accent);height:var(--tap)}
+.seg{display:flex;background:var(--surface-2);border-radius:var(--r-m);padding:4px;gap:4px}
+.seg button{flex:1;min-height:40px;border-radius:14px;font-weight:600;color:var(--ink-2);transition:all .18s var(--ease)}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.switch{width:56px;height:36px;border-radius:99px;background:var(--line);position:relative;transition:background .2s;flex:none}
+.switch::after{content:"";position:absolute;left:4px;top:4px;width:28px;height:28px;border-radius:50%;background:#fff;transition:transform .2s var(--ease);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.switch.on{background:var(--ok)} .switch.on::after{transform:translateX(20px)}
+
+/* tab bar */
+.tabbar{position:absolute;left:12px;right:12px;bottom:calc(12px + var(--sab));height:64px;border-radius:24px;background:var(--surface);box-shadow:var(--shadow);
+  display:flex;padding:6px;gap:4px;z-index:5}
+.tab{flex:1;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:11px;color:var(--muted);transition:all .18s var(--ease)}
+.tab .ico{font-size:20px;line-height:1}
+.tab.on{background:var(--lav);color:var(--lav-ink);font-weight:650}
+
+/* main button (stand-in for Telegram MainButton) */
+#mainbtn{position:absolute;left:16px;right:16px;bottom:calc(16px + var(--sab));z-index:8;height:54px;border-radius:var(--r-m);background:var(--accent);color:var(--accent-ink);
+  font-weight:700;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+#mainbtn.show{display:flex} #mainbtn[disabled]{opacity:.45}
+.tabbar.hidden{display:none}
+
+/* sheet / toast / skeleton */
+.scrim{position:absolute;inset:0;background:rgba(30,28,36,.38);opacity:0;pointer-events:none;transition:opacity .2s;z-index:20}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:absolute;left:0;right:0;bottom:0;max-height:88%;overflow:auto;background:var(--bg);border-radius:28px 28px 0 0;padding:10px 16px calc(28px + var(--sab));z-index:21;
+  transform:translateY(105%);transition:transform .3s var(--ease)}
+.sheet.on{transform:none} .grab{width:40px;height:5px;border-radius:9px;background:var(--line);margin:0 auto 14px}
+.toast{position:absolute;left:50%;top:14px;transform:translate(-50%,-80px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;
+  font-size:14px;z-index:40;transition:transform .3s var(--ease);max-width:90%}
+.toast.on{transform:translate(-50%,0)}
+.skel{background:linear-gradient(90deg,var(--surface-2),var(--surface),var(--surface-2));background-size:200% 100%;animation:sk 1.2s infinite;border-radius:var(--r-m)}
+@keyframes sk{to{background-position:-200% 0}}
+.empty{text-align:center;padding:40px 16px;color:var(--muted)} .empty .big{font-size:44px}
+.hr{height:1px;background:var(--line);margin:4px 0}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* desktop preview frame (mock phone) */
+body.frame{display:grid;place-items:center;background:#E8E3DA;min-height:100%}
+body.frame #phone{width:390px;height:min(844px,96vh);border-radius:44px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.18);border:10px solid #1b1a20;background:var(--bg)}
+body.frame #tgbar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:var(--surface);font-size:14px;font-weight:600}
+body.frame #app{height:calc(100% - 44px)}
+#tgbar{display:none} body.frame #tgbar{display:flex}
+.themebtn{position:fixed;right:14px;top:14px;z-index:99;background:var(--surface);border-radius:99px;padding:8px 14px;box-shadow:var(--shadow);font-size:13px}
+body:not(.frame) .themebtn{display:none}

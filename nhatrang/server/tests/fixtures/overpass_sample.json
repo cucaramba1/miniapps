@@ -1,0 +1,10 @@
+{"elements": [
+ {"type":"node","id":1,"lat":12.2388,"lon":109.1967,"tags":{"tourism":"hotel","name":"Vĩnh Hải \"Sunrise\" 🌅","name:en":"Vinh Hai Sunrise"}},
+ {"type":"way","id":2,"center":{"lat":12.24,"lon":109.19},"tags":{"tourism":"guest_house","name":"Nhà nghỉ Hoa"}},
+ {"type":"node","id":3,"tags":{"tourism":"hotel","name":"Без координат"}},
+ {"type":"node","id":4,"lat":12.2390,"lon":109.1970,"tags":{"amenity":"pharmacy","name":"Nhà thuốc"}},
+ {"type":"node","id":5,"lat":12.2391,"lon":109.1971,"tags":{"shop":"massage"}},
+ {"type":"node","id":6,"lat":12.2392,"lon":109.1972,"tags":{"shop":"greengrocer","name":"Trái cây"}},
+ {"type":"node","id":7,"lat":12.2393,"lon":109.1973,"tags":{"tourism":"hotel"}},
+ {"type":"node","id":8,"lat":12.2394,"lon":109.1974,"tags":{"amenity":"parking"}}
+]}

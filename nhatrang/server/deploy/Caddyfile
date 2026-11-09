@@ -1,0 +1,8 @@
+# Замените YOUR_DOMAIN. HTTPS выпускается автоматически.
+YOUR_DOMAIN {
+    encode gzip
+    reverse_proxy 127.0.0.1:8000
+    request_body {
+        max_size 40MB   # до 5 фото по 6 МБ
+    }
+}

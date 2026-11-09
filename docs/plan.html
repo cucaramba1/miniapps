@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Планы каналов без лица</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: two switchable plans (#youtube, #ai-model), each a vertical sequence of bands: decision, options, schedule, risks. */
+:root{
+  --bg:#FAF7F2; --surface:#FFFFFF; --ink:#2A2831; --ink2:#55526A; --muted:#6B677A; --line:#ECE6DC;
+  --lav:#DDD7F6; --lav-ink:#50479A; --mint:#CFEBDD; --mint-ink:#2F6B52; --peach:#FFDDCB; --peach-ink:#9A4F2B;
+  --sky:#D4E8F8; --sky-ink:#2F6290; --butter:#FFF1C4; --butter-ink:#7A5C0C; --rose:#F9D6E0; --rose-ink:#9B3557;
+  --accent:#6B5DD3; --accent-ink:#FFFFFF; --shadow:0 1px 2px rgba(42,40,49,.05),0 10px 30px rgba(42,40,49,.07);
+  --font:"Onest",-apple-system,"SF Pro Text",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1D1C23; --surface:#27262F; --ink:#F1EFF6; --ink2:#C5C2D1; --muted:#9A97A8; --line:#3A3945;
+  --lav:#3B3763; --lav-ink:#D7D1FA; --mint:#2E4A3F; --mint-ink:#BFE8D3; --peach:#5A3E31; --peach-ink:#FFD3BC;
+  --sky:#2C4258; --sky-ink:#C6E3F8; --butter:#554A25; --butter-ink:#FFEDB0; --rose:#573340; --rose-ink:#F9CFDC;
+  --accent:#A99EF2; --accent-ink:#1D1C23; --shadow:0 1px 2px rgba(0,0,0,.2),0 10px 30px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1D1C23; --surface:#27262F; --ink:#F1EFF6; --ink2:#C5C2D1; --muted:#9A97A8; --line:#3A3945;
+  --lav:#3B3763; --lav-ink:#D7D1FA; --mint:#2E4A3F; --mint-ink:#BFE8D3; --peach:#5A3E31; --peach-ink:#FFD3BC;
+  --sky:#2C4258; --sky-ink:#C6E3F8; --butter:#554A25; --butter-ink:#FFEDB0; --rose:#573340; --rose-ink:#F9CFDC;
+  --accent:#A99EF2; --accent-ink:#1D1C23; --shadow:0 1px 2px rgba(0,0,0,.2),0 10px 30px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--font);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+main{max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:44px}
+h1{font-size:clamp(28px,5.5vw,42px);line-height:1.1;letter-spacing:-.025em;margin:0;font-weight:700;text-wrap:balance}
+h2{font-size:clamp(21px,3.6vw,26px);letter-spacing:-.02em;margin:0;font-weight:650;text-wrap:balance}
+h3{font-size:16px;margin:0 0 6px;font-weight:650}
+p{margin:0;max-width:66ch;color:var(--ink2)}
+.nav{display:flex;gap:8px;flex-wrap:wrap}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:99px;background:var(--surface);color:var(--ink);text-decoration:none;font-weight:600;box-shadow:inset 0 0 0 1.5px var(--line)}
+.nav a[aria-current="page"]{background:var(--lav);color:var(--lav-ink);box-shadow:none}
+.nav a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.view{display:none;flex-direction:column;gap:44px} .view.on{display:flex}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:99px;background:var(--lav);color:var(--lav-ink);margin-bottom:12px}
+.band{display:flex;flex-direction:column;gap:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.box{background:var(--surface);border-radius:22px;padding:18px;box-shadow:var(--shadow);min-width:0}
+.box p{font-size:15px}
+.box.rec{outline:2px solid var(--accent);outline-offset:-2px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:4px 10px;border-radius:99px;margin:0 6px 8px 0}
+.p-mint{background:var(--mint);color:var(--mint-ink)} .p-peach{background:var(--peach);color:var(--peach-ink)} .p-lav{background:var(--lav);color:var(--lav-ink)} .p-sky{background:var(--sky);color:var(--sky-ink)} .p-rose{background:var(--rose);color:var(--rose-ink)} .p-butter{background:var(--butter);color:var(--butter-ink)}
+.tbl{overflow-x:auto;background:var(--surface);border-radius:22px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.sw{display:flex;gap:6px;margin:10px 0}
+.sw i{flex:1;height:34px;border-radius:10px;display:block;border:1px solid var(--line)}
+.frame{aspect-ratio:16/9;border-radius:16px;display:grid;place-items:center;font-size:13px;font-weight:600;position:relative;overflow:hidden;max-width:100%}
+.frame small{position:absolute;left:10px;bottom:8px;font-size:11px;opacity:.85;font-weight:500}
+.step{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border-bottom:0}
+.step b{color:var(--lav-ink);background:var(--lav);border-radius:12px;padding:6px 10px;align-self:start;text-align:center;font-size:14px}
+.callout{background:var(--peach);color:var(--peach-ink);border-radius:22px;padding:20px}
+.callout p,.callout li{color:inherit}
+.callout ul{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--lav);color:var(--lav-ink);padding:2px 6px;border-radius:6px}
+.prompt{background:var(--surface);border-radius:16px;padding:14px;box-shadow:var(--shadow);font-size:14px;color:var(--ink2);overflow-wrap:anywhere}
+@media (max-width:480px){.step{grid-template-columns:1fr;gap:8px}}
+</style>
+</head><body>
+<main>
+  <header>
+    <span class="tag">Планы запуска</span>
+    <h1>Канал без лица и ИИ-персонаж</h1>
+    <p style="margin-top:12px;font-size:18px">Два потока с одним устройством: ниша, визуальный стиль, недели работы, цифры, по которым решаем продолжать или нет. Оба питают платное приложение по жилью в Нячанге.</p>
+  </header>
+  <nav class="nav" aria-label="Разделы"><a href="#youtube" data-v="youtube">YouTube без лица</a><a href="#ai-model" data-v="ai-model">ИИ-модель в Instagram и TikTok</a></nav>
+
+  <!-- ============ YOUTUBE ============ -->
+  <div class="view" id="v-youtube">
+    <section class="band">
+      <h2>Решение по нише</h2>
+      <p>Оценки мои, это мнение и не прогноз дохода. Критерии: есть ли у тебя то, чего нет у конкурентов, ведёт ли ролик к приложению, насколько нишу заполнили ИИ-каналы.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Ниша</th><th>Твоё преимущество</th><th>Воронка в приложение</th><th>Риск</th></tr></thead>
+        <tbody>
+          <tr><td><b>Жизнь в Нячанге, русский</b> <span class="pill p-mint">рекомендую первой</span></td><td>собственный футаж, данные твоего поиска жилья</td><td>прямая, та же аудитория, что у приложения</td><td>аудитория уже есть у местных блогеров</td></tr>
+          <tr><td>Жизнь во Вьетнаме, английский</td><td>те же съёмки, перенос сценариев</td><td>слабее, приложение пока русскоязычное</td><td>английский текст нужно вычитывать</td></tr>
+          <tr><td>Цены и районы (данные в картинках)</td><td>твои объявления и цены, чужие это не сгенерируют</td><td>сильная: «найдите в приложении»</td><td>цены устаревают, нужна дата в кадре</td></tr>
+          <tr><td>Путеводитель по местам</td><td>твоя карта мест из приложения</td><td>средняя</td><td>много конкурентов у туристических гидов</td></tr>
+          <tr><td>Нутрициология и силовые</td><td>нет</td><td>нет</td><td>медицинская тема, нужна экспертиза (твоя же оценка 4 из 10)</td></tr>
+        </tbody></table></div>
+      <div class="callout"><h3>Моя рекомендация</h3>
+        <p>Начать с русского канала про жизнь и цены в Нячанге. Он быстрее всего приводит людей в приложение, на нём можно проверить гипотезу по оплате. Английскую версию делать позже из тех же съёмок. Если не согласен, это решение переворачивается без потерь: стиль и конвейер те же.</p></div>
+    </section>
+
+    <section class="band">
+      <h2>Варианты визуального оформления</h2>
+      <p>Это эскизы настроения, не готовые кадры. Шапка для генерации на английском лежит под каждым вариантом: её вставляют дословно в каждый промпт кадра (твой метод из заметки про единый стиль).</p>
+      <div class="grid">
+        <article class="box rec"><span class="pill p-mint">рекомендую</span><h3>A. Пастельная графика</h3>
+          <div class="frame" style="background:linear-gradient(135deg,#CFEBDD,#DDD7F6);color:#2A2831">цифры, карты, карточки<small>как приложение</small></div>
+          <div class="sw"><i style="background:#FAF7F2"></i><i style="background:#CFEBDD"></i><i style="background:#DDD7F6"></i><i style="background:#FFDDCB"></i><i style="background:#2A2831"></i></div>
+          <p>Единый бренд с приложением, дёшево делается в motion-графике, цены и карты читаются лучше любой картинки. Подходит для роликов с данными.</p>
+          <div class="prompt" style="margin-top:10px">Flat pastel infographic, soft mint and lavender palette, warm off-white background, rounded cards, generous spacing, clean sans-serif numbers, no people, subtle paper grain.</div></article>
+        <article class="box"><h3>B. Тёплая плёнка</h3>
+          <div class="frame" style="background:linear-gradient(160deg,#F2B77D,#7A5C45);color:#FFF6E8">твой футаж на плёнке<small>золотой час, зерно</small></div>
+          <div class="sw"><i style="background:#F2B77D"></i><i style="background:#C98A5B"></i><i style="background:#7A5C45"></i><i style="background:#2F3A4A"></i><i style="background:#FFF6E8"></i></div>
+          <p>Для роликов с твоей реальной съёмкой и ощущением места. Нужен хороший футаж: твоя цель про свет и кадр iPhone 15 Pro это и тренирует.</p>
+          <div class="prompt" style="margin-top:10px">Cinematic documentary still, 35mm film look, warm golden hour light, shallow depth of field, fine grain, muted teal shadows, no faces in close-up.</div></article>
+        <article class="box"><h3>C. Изометрический город</h3>
+          <div class="frame" style="background:linear-gradient(135deg,#D4E8F8,#CFEBDD);color:#2F6290">районы Нячанга кубиками<small>3D, мягкие тени</small></div>
+          <div class="sw"><i style="background:#D4E8F8"></i><i style="background:#CFEBDD"></i><i style="background:#FFF1C4"></i><i style="background:#F9D6E0"></i><i style="background:#50479A"></i></div>
+          <p>Для сравнения районов и жилых комплексов. Хорошо смотрится в превью. Генерация сложнее, нужен единый референс.</p>
+          <div class="prompt" style="margin-top:10px">Isometric miniature city block, soft pastel clay 3D render, rounded buildings, gentle shadows, sea on the right, top-down 30 degree angle, no text.</div></article>
+        <article class="box"><h3>D. Акварельный блокнот</h3>
+          <div class="frame" style="background:linear-gradient(135deg,#F9D6E0,#FFF1C4);color:#9B3557">эскизы мест и еды<small>рисованный путевой дневник</small></div>
+          <div class="sw"><i style="background:#F9D6E0"></i><i style="background:#FFF1C4"></i><i style="background:#CFEBDD"></i><i style="background:#D4E8F8"></i><i style="background:#9B3557"></i></div>
+          <p>Для гидов по местам и еде. Теплее и «человечнее» безликого ИИ, но менее узнаваем среди других каналов.</p>
+          <div class="prompt" style="margin-top:10px">Loose watercolor travel sketchbook page, soft pastel washes, ink outlines, handwritten captions area, warm paper texture, Vietnamese street scenes without faces.</div></article>
+      </div>
+      <p>Выбор по умолчанию: A для роликов с цифрами плюс B для вставок с твоим футажом. Так канал выглядит как один бренд с приложением и не требует дорогой генерации.</p>
+    </section>
+
+    <section class="band">
+      <h2>План по неделям</h2>
+      <p>Нагрузка рассчитана на твои настройки из «Мои цели»: 4 часа в будни и 2 в выходные. Это около 24 часов в неделю, на один длинный ролик и 2-3 коротких. Если свободного времени меньше, режь шорты, а не длинный.</p>
+      <div class="box">
+        <div class="step"><b>Неделя 0</b><div><h3>Основа</h3><p>Название и аватар канала, шапка стиля из выбранного варианта, шаблон превью, шаблон сценария с частным триггером (узнаваемая деталь для переехавших в Нячанг). Список из 10 тем из реальных вопросов в чатах Нячанга.</p></div></div>
+        <div class="step"><b>Неделя 1</b><div><h3>Пилот</h3><p>Один ролик на 6-8 минут «Сколько стоит месяц в Нячанге». Цифры из твоих объявлений и расходов. Сделать 3 варианта превью, проверить удержание первых 30 секунд.</p></div></div>
+        <div class="step"><b>Недели 2-4</b><div><h3>Ритм</h3><p>Один длинный ролик в неделю и 2-3 шорта, нарезанные из него. В описании ссылка на бот приложения и аффилиатные ссылки (отели, eSIM, страховка). Каждую неделю запись: что взлетело, что нет.</p></div></div>
+        <div class="step"><b>Неделя 5</b><div><h3>Разбор</h3><p>Смотрим CTR превью, удержание на 30-й секунде, переходы в приложение. Решение по критериям ниже: продолжаем, меняем формат или нишу.</p></div></div>
+        <div class="step"><b>Недели 6-12</b><div><h3>Масштаб</h3><p>Английская версия лучших роликов, серия про районы, обзоры отелей до 1000 ₽ (у тебя уже в работе для Cucaramba TV: используем ту же съёмку).</p></div></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <h2>Как делается ролик</h2>
+      <div class="grid">
+        <div class="box"><h3>1. Идея и превью</h3><p>Сначала название и превью, потом сценарий. Частный триггер: деталь, которую узнаёт только целевая аудитория.</p></div>
+        <div class="box"><h3>2. Сценарий</h3><p>Хук 5 секунд, самые сильные блоки в начало, призыв в середине, концовка. Факты и цены сверять с источником, дата в кадре.</p></div>
+        <div class="box"><h3>3. Кадры</h3><p>Шапка стиля плюс описание кадра, ракурс меняется каждые 2-3 кадра. Бесплатные кредиты видеомоделей тратим только с твоего подтверждения.</p></div>
+        <div class="box"><h3>4. Голос и монтаж</h3><p>Голос ElevenLabs, монтаж в hyperframes или remotion. Черновик в 720p, полный размер после твоего «ок».</p></div>
+        <div class="box"><h3>5. SEO и выход</h3><p>3 названия до 60 символов, описание, теги, текст обложки. Скилл youtube-seo.</p></div>
+        <div class="box"><h3>6. Разбор</h3><p>Через 48 часов смотрим CTR и удержание, записываем вывод для следующего ролика.</p></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <h2>Цифры и условия остановки</h2>
+      <div class="grid">
+        <div class="box"><h3>Что считаем</h3><p>CTR превью, удержание на 30-й секунде, переходы в бот приложения из описания, число /start от видео, клики по аффилиатным ссылкам.</p></div>
+        <div class="box"><h3>Порог монетизации</h3><p>1000 подписчиков и 4000 часов просмотра. Сроки в твоей заметке оценочные (3-6 месяцев регулярной публикации), это не факт.</p></div>
+        <div class="box"><h3>Когда менять курс</h3><p>Если за 5 недель и 8 роликов нет роста подписчиков и ни одного перехода в приложение, меняем формат или нишу. Цифры порога мои, правь их под себя.</p></div>
+      </div>
+      <div class="callout"><h3>Риски</h3><ul>
+        <li>Цены и визовые правила устаревают: дата в кадре и проверка перед выходом.</li>
+        <li>Русскоязычного ИИ-контента много: спасают твои данные и реальный футаж, а не генерация.</li>
+        <li>Чужой контент без переработки не берём: законность и платформы.</li></ul></div>
+    </section>
+  </div>
+
+  <!-- ============ AI MODEL ============ -->
+  <div class="view" id="v-ai-model">
+    <section class="band">
+      <h2>Решение: какой персонаж</h2>
+      <p>11.10 ты отложил «ИИ-модель» как перегретый рынок без связи с продуктом, сейчас решил запускать. Чтобы не повторять чужое, предлагаю привязать персонажа к Нячангу и приложению. Тогда у него есть тема, которой нет у массовых ИИ-девушек, и каждый ролик ведёт в продукт.</p>
+      <div class="grid">
+        <article class="box rec"><span class="pill p-mint">рекомендую</span><h3>1. ИИ-гид по Нячангу</h3><p>Персонаж «живёт» в городе: показывает места из твоей карты, квартиры, цены, быт переезда. Прямая воронка в приложение. Тема узкая, значит, меньше конкуренции.</p></article>
+        <article class="box"><h3>2. Лайфстайл-инфлюенсер</h3><p>Красивые кадры, путешествия, мода. Самая массовая ниша, ролики легко генерируются, но и конкурентов тысячи, к продукту не ведёт.</p></article>
+        <article class="box"><h3>3. Мультяшный маскот</h3><p>Нарисованный герой, не похожий на человека. Проще держать единый вид, меньше этических вопросов, легче масштабировать на разные города.</p></article>
+      </div>
+    </section>
+
+    <section class="band">
+      <h2>Визуальный образ</h2>
+      <div class="grid">
+        <article class="box rec"><span class="pill p-mint">рекомендую</span><h3>Фотореалистичная героиня в мягкой пастели</h3>
+          <div class="frame" style="background:linear-gradient(180deg,#FFDDCB,#DDD7F6);color:#9A4F2B">эскиз настроения<small>портретный кадр, мягкий свет</small></div>
+          <div class="sw"><i style="background:#FFDDCB"></i><i style="background:#DDD7F6"></i><i style="background:#CFEBDD"></i><i style="background:#FAF7F2"></i><i style="background:#2A2831"></i></div>
+          <p>Узнаваемая палитра как у приложения. Одежда и локации повторяются, поэтому её легко держать единой.</p></article>
+        <article class="box"><h3>Стилизованный 3D-герой</h3>
+          <div class="frame" style="background:linear-gradient(180deg,#D4E8F8,#CFEBDD);color:#2F6290">эскиз настроения<small>мягкий пластик, крупный план</small></div>
+          <div class="sw"><i style="background:#D4E8F8"></i><i style="background:#CFEBDD"></i><i style="background:#FFF1C4"></i><i style="background:#F9D6E0"></i><i style="background:#2F6290"></i></div>
+          <p>Явно «не человек», нет вопроса про обман. Устойчивее к сбоям генерации лица.</p></article>
+      </div>
+      <div class="box"><h3>Как держать одно лицо</h3>
+        <p>Собрать «паспорт персонажа»: 8-10 эталонных кадров (лицо с трёх сторон, три наряда, походка), описание на английском на 60-100 слов, голос, манера речи, список запретов. Каждая генерация идёт от эталонов и неизменной шапки. Конкретную модель выбираем в пилоте, сейчас в стеке у тебя Nano Banana для картинок, Kling и Seedance для движения.</p></div>
+    </section>
+
+    <section class="band">
+      <h2>Рубрики и поток</h2>
+      <div class="grid">
+        <div class="box"><h3>Квартира за неделю</h3><p>Обзор реального варианта и красные флаги. Берёт данные из приложения.</p></div>
+        <div class="box"><h3>Куда пойти</h3><p>Места из карты гида: популярные открыто, редкие в приложении.</p></div>
+        <div class="box"><h3>Сколько это стоит</h3><p>Цены на еду, транспорт, связь. Дата в кадре.</p></div>
+        <div class="box"><h3>Ошибки переезда</h3><p>Короткие истории и как их избежать. Лучшие рубрики для шеринга.</p></div>
+      </div>
+      <div class="box"><h3>Поток на неделю</h3>
+        <p>Тренд берём из Reels Radar (сетка трендов и адаптация под нишу из прототипа), сценарий под рубрику, генерация кадров и голоса, монтаж, публикация в Instagram Reels и TikTok. Ссылка на бот приложения в шапке профиля. Темп старта: 5 роликов в неделю на обе площадки, один и тот же ролик с разной подписью.</p></div>
+    </section>
+
+    <section class="band">
+      <h2>30 дней запуска</h2>
+      <div class="box">
+        <div class="step"><b>Дни 1-3</b><div><h3>Паспорт персонажа</h3><p>Выбор концепта и образа, эталонные кадры, имя, био, ссылка на бот. В описании профиля пометка, что это ИИ-персонаж.</p></div></div>
+        <div class="step"><b>Дни 4-10</b><div><h3>10 тестовых роликов</h3><p>Две рубрики, разные хуки из радара трендов. Смотрим, где персонаж выглядит живо и где ломается лицо.</p></div></div>
+        <div class="step"><b>Дни 11-25</b><div><h3>Ритм 5 в неделю</h3><p>Оставляем то, что набрало просмотры, убираем остальное. Каждую неделю считаем переходы в бот.</p></div></div>
+        <div class="step"><b>День 30</b><div><h3>Решение</h3><p>Продолжаем, меняем концепт или закрываем. Критерии ниже.</p></div></div>
+      </div>
+      <div class="grid">
+        <div class="box"><h3>Считаем</h3><p>Просмотры и удержание, подписчики, переходы в бот, число платных доступов от этого канала.</p></div>
+        <div class="box"><h3>Стоп-сигналы</h3><p>За 30 дней нет ни одного ролика со значимым ростом просмотров и ни одного перехода в приложение. Планку выставим вместе по первым цифрам, сейчас у меня нет данных для честной цифры.</p></div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h3>Рамки, которые я бы не нарушал</h3>
+      <ul>
+        <li>Персонаж помечен как ИИ в профиле и в роликах. По моим сведениям обе площадки требуют метки на реалистичном ИИ-контенте, точные правила нужно сверить перед запуском, я их не проверял.</li>
+        <li>Не копировать внешность реального человека и не выдавать персонажа за живую девушку.</li>
+        <li>Без откровенного контента и без схемы «ИИ-аватар, за которым скрывается мужчина, берёт донаты»: ты сам отмечал это в заметке как красный флаг.</li>
+        <li>Если приложение продаёт доступ, ролик не обещает того, чего в нём нет.</li></ul>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+  var views=['youtube','ai-model'];
+  function show(){
+    var h=(location.hash||'').replace('#','');
+    if(views.indexOf(h)<0) h='youtube';
+    views.forEach(function(v){ document.getElementById('v-'+v).classList.toggle('on',v===h); });
+    document.querySelectorAll('.nav a').forEach(function(a){ if(a.dataset.v===h) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+  }
+  window.addEventListener('hashchange',show); show();
+})();
+</script>
+</body></html>

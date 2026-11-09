@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Студия без лица</title>
+<link rel="stylesheet" href="../shared/ds.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  .stg{display:flex;gap:6px;margin:14px 0} .stg button{flex:1;min-height:44px;border-radius:14px;background:var(--surface-2);font-size:18px;position:relative;transition:all .18s var(--ease)}
+  .stg button.done{background:var(--mint)} .stg button.cur{background:var(--lav);box-shadow:inset 0 0 0 2px var(--accent)}
+  .vc{text-align:left;display:flex;gap:12px;align-items:center}
+  .vt{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:30px;flex:none}
+  .prog{height:6px;border-radius:9px;background:var(--surface-2);overflow:hidden;margin-top:6px} .prog i{display:block;height:100%;background:var(--accent);border-radius:9px}
+  .shot{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .shot .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--lav);color:var(--lav-ink);display:grid;place-items:center;font-size:13px;font-weight:700}
+  textarea.input{padding:12px;min-height:90px}
+  .kpi{display:grid;grid-template-columns:1fr 1fr;gap:12px} .kpi .card b{font-size:24px;display:block}
+</style></head>
+<body>
+<button class="themebtn" data-testid="theme">🌗 тема</button>
+<div id="phone">
+ <div id="tgbar"><button id="tgback" aria-label="Назад" style="visibility:hidden">‹ Назад</button><span id="tgtitle">Студия без лица</span><span>⋯</span></div>
+ <div id="app">
+
+  <section class="screen has-tabs" id="s-board" data-testid="s-board">
+    <div class="row between" style="margin-bottom:10px"><div><div class="muted sm" id="ch-name">Канал: Жизнь во Вьетнаме (EN)</div><h1>Видео</h1></div><button class="chip" data-sheet="sh-ch" data-testid="open-ch">Канал ▾</button></div>
+    <div class="chips" id="fl"></div>
+    <div class="col" id="vlist" data-testid="vlist"></div>
+  </section>
+
+  <section class="screen" id="s-video" data-testid="s-video"></section>
+
+  <section class="screen has-tabs" id="s-ideas" data-testid="s-ideas">
+    <div class="row between" style="margin-bottom:12px"><h1>Идеи</h1><button class="chip" data-sheet="sh-new" data-testid="open-new">＋ Идея</button></div>
+    <div class="col" id="ilist" data-testid="ilist"></div>
+  </section>
+
+  <section class="screen has-tabs" id="s-lib" data-testid="s-lib">
+    <h1 style="margin-bottom:12px">Промпты</h1>
+    <div class="col" id="plist"></div>
+  </section>
+
+  <section class="screen has-tabs" id="s-stats" data-testid="s-stats">
+    <h1 style="margin-bottom:12px">Путь к монетизации</h1>
+    <div class="card col"><div class="row between"><b>Подписчики</b><span class="muted sm">цель 1000</span></div><div class="prog"><i style="width:3%"></i></div>
+      <div class="row between"><b>Часы просмотра</b><span class="muted sm">цель 4000</span></div><div class="prog"><i style="width:1%"></i></div></div>
+    <div class="kpi" style="margin-top:12px"><div class="card"><div class="muted xs">Опубликовано</div><b id="k-pub">0</b></div><div class="card"><div class="muted xs">В работе</div><b id="k-wip">0</b></div></div>
+    <p class="muted xs" style="margin-top:10px">Цифры подписчиков и часов в прототипе демонстрационные.</p>
+  </section>
+
+  <nav class="tabbar" data-testid="tabbar">
+    <button class="tab" data-go="board" data-testid="tab-board"><span class="ico">🎞️</span>Видео</button>
+    <button class="tab" data-go="ideas" data-testid="tab-ideas"><span class="ico">💡</span>Идеи</button>
+    <button class="tab" data-go="lib" data-testid="tab-lib"><span class="ico">🧾</span>Промпты</button>
+    <button class="tab" data-go="stats" data-testid="tab-stats"><span class="ico">📈</span>Путь</button>
+  </nav>
+  <button id="mainbtn" data-testid="mainbtn"></button>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sh-new" data-testid="sh-new"><div class="grab"></div><h2 style="margin-bottom:12px">Новая идея</h2>
+    <input class="input" id="idea-in" placeholder="О чём видео?" data-testid="idea-in" style="margin-bottom:10px">
+    <button class="btn block" data-act="addidea" data-testid="idea-add">Добавить</button></div>
+  <div class="sheet" id="sh-ch" data-testid="sh-ch"><div class="grab"></div><h2 style="margin-bottom:12px">Канал</h2><div class="col">
+    <button class="btn ghost block" data-act="setch" data-n="Жизнь во Вьетнаме (EN)" data-testid="ch-1">Жизнь во Вьетнаме (EN)</button>
+    <button class="btn ghost block" data-act="setch" data-n="Питание и силовые (RU)" data-testid="ch-2">Питание и силовые (RU)</button></div></div>
+  <div class="toast" id="toast" role="status"></div>
+ </div>
+</div>
+<script src="../shared/tgx.js"></script>
+<script>
+const {$,$$,go,toast,setMain,sheet,register,acts}=tgx;
+const ST=[['💡','Идея'],['📝','Сценарий'],['🖼️','Кадры'],['🎙️','Озвучка'],['🔎','SEO'],['🚀','Выход']];
+const STYLE='Единый стиль: тёплый кинематографичный свет, пастельная палитра, мягкая плёнка, без лиц крупным планом';
+let V=[
+ {id:'v1',e:'🌴',c:'mint',t:'Сколько стоит месяц в Нячанге',st:2,fmt:'8–10 мин'},
+ {id:'v2',e:'🏠',c:'sky',t:'Квартира за $800: что вы получите',st:1,fmt:'7 мин'},
+ {id:'v3',e:'🍜',c:'peach',t:'Еда за $5 в день: возможно ли',st:4,fmt:'6 мин'},
+ {id:'v4',e:'🛵',c:'butter',t:'Права и байк для иностранца',st:5,fmt:'9 мин',pub:true},
+];
+const IDEAS=['Визовый ран: как не потерять деньги','Лучшие кафе для работы с ноутбуком','Сезон дождей: чего ждать'];
+const PROMPTS=[['Ниша и аудитория','Предложи 10 тем для канала без лица про жизнь в Нячанге, аудитория: англоязычные цифровые кочевники.'],['Сценарий с хуком','Напиши сценарий на 8 минут: хук 5 секунд, три блока, личный триггер на 2-й минуте, финал с призывом.'],['Шапка кадров',STYLE],['SEO-пакет','Дай 3 названия до 60 символов, описание 150 слов, 15 тегов и текст для обложки.']];
+const S={fl:'all',cur:null,ch:'Жизнь во Вьетнаме (EN)',shots:{}};
+const bg=c=>`background:var(--${c})`;
+const shotsFor=v=>S.shots[v.id]||(S.shots[v.id]=['Общий план города на рассвете','Рука с чашкой кофе у окна','Рынок крупным планом, без лиц','Закат над набережной'].map(x=>x));
+
+function renderBoard(){
+  $('#fl').innerHTML=[['all','Все'],['wip','В работе'],['pub','Вышли']].map(([k,n])=>`<button class="chip ${S.fl===k?'on':''}" data-act="fl" data-k="${k}" data-testid="fl-${k}">${n}</button>`).join('');
+  const l=V.filter(v=>S.fl==='all'||(S.fl==='pub'?v.pub:!v.pub));
+  $('#vlist').innerHTML=l.length?l.map(v=>`<button class="card tap vc" data-act="open" data-id="${v.id}" data-testid="vc-${v.id}"><span class="vt" style="${bg(v.c)}">${v.e}</span><div class="grow"><h3>${tgx.esc(v.t)}</h3><div class="muted xs">${ST[v.st][1]} · ${v.fmt}</div><div class="prog"><i style="width:${(v.st+1)/6*100}%"></i></div></div></button>`).join(''):`<div class="empty"><div class="big">🎬</div><h3>Тут пока пусто</h3><p>Возьмите идею в работу</p><button class="btn" style="margin-top:12px" data-go="ideas" data-testid="empty-ideas">К идеям</button></div>`;
+}
+function stageBody(v){
+  const k=v.st;
+  if(k===0) return `<p class="muted">Идея выбрана. Следующий шаг: сценарий с хуком и личным триггером.</p>`;
+  if(k===1) return `<textarea class="input" data-testid="script" placeholder="Сценарий">Хук (0–5 с): Сколько на самом деле стоит месяц жизни в Нячанге?\nБлок 1: жильё\nБлок 2: еда и транспорт\nБлок 3: что я бы сэкономил\nФинал: подпишись на расчёт по неделям</textarea><button class="btn ghost" data-act="aiscript" data-testid="ai-script">✨ Улучшить хук</button>`;
+  if(k===2) return `<div class="muted xs" style="margin-bottom:6px">${STYLE}</div>${shotsFor(v).map((s,i)=>`<div class="shot"><span class="n">${i+1}</span><div class="grow">${s}</div><button class="chip" data-act="shotcopy" data-i="${i}" data-testid="shot-copy-${i}">Промпт</button></div>`).join('')}`;
+  if(k===3) return `<div class="seg" id="vseg"><button class="on" data-act="voice" data-testid="voice-a">Голос A</button><button data-act="voice" data-testid="voice-b">Голос B</button></div><p class="muted sm" style="margin-top:10px">Озвучка ~8 минут. Файл подтянется после генерации.</p>`;
+  if(k===4) return `<div class="col"><span class="pill p-sky">Название</span><b>${tgx.esc(v.t)}: честный расчёт 2026</b><span class="pill p-sky">Теги</span><p class="muted sm">nha trang, vietnam cost of living, digital nomad, expat life</p><span class="pill p-sky">Обложка</span><p class="muted sm">Крупный текст «$900», пастельный фон, без лица.</p></div>`;
+  return v.pub?`<div class="empty"><div class="big">🎉</div><h3>Видео вышло</h3><p>Следите за метриками на вкладке «Путь»</p></div>`:`<p class="muted">Всё готово. Поставьте в очередь публикации.</p>`;
+}
+function renderVideo(id){
+  const v=V.find(x=>x.id===id); S.cur=v;
+  $('#s-video').innerHTML=`<div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2 class="grow">${tgx.esc(v.t)}</h2></div>
+  <div class="stg">${ST.map(([e],i)=>`<button class="${i<v.st?'done':i===v.st?'cur':''}" data-act="stage" data-i="${i}" data-testid="stg-${i}" aria-label="${ST[i][1]}">${i<v.st?'✓':e}</button>`).join('')}</div>
+  <div class="row between" style="margin-bottom:8px"><h2>${ST[v.st][1]}</h2><span class="pill p-lav">${v.st+1} из 6</span></div>
+  <div class="card col" id="stbody">${stageBody(v)}</div>`;
+  if(v.pub) setMain(null); else setMain(v.st===5?'Опубликовать':'Готово, дальше',()=>advance());
+}
+function advance(){
+  const v=S.cur; if(v.st===5){ v.pub=true; toast('Поставлено в очередь публикации'); } else { v.st++; toast('Этап: '+ST[v.st][1]); }
+  renderVideo(v.id); renderBoard(); stats();
+}
+function stats(){ $('#k-pub').textContent=V.filter(v=>v.pub).length; $('#k-wip').textContent=V.filter(v=>!v.pub).length; }
+register({
+ board:{title:'Студия без лица',tab:'board',enter(){renderBoard();stats();setMain(null);}},
+ video:{title:'Видео',parentTab:'board',hideTabs:true,enter(el,p){renderVideo(p.id);}},
+ ideas:{title:'Идеи',tab:'ideas',enter(){renderIdeas();setMain(null);}},
+ lib:{title:'Промпты',tab:'lib',enter(){$('#plist').innerHTML=PROMPTS.map(([n,t],i)=>`<div class="card col"><h3>${n}</h3><p class="muted sm">${t}</p><button class="btn ghost" data-act="pcopy" data-i="${i}" data-testid="pc-${i}">Копировать</button></div>`).join('');setMain(null);}},
+ stats:{title:'Путь',tab:'stats',enter(){stats();setMain(null);}},
+});
+function renderIdeas(){ $('#ilist').innerHTML=IDEAS.length?IDEAS.map((t,i)=>`<div class="card row"><span style="font-size:26px">💡</span><div class="grow">${tgx.esc(t)}</div><button class="chip" data-act="take" data-i="${i}" data-testid="take-${i}">В работу</button></div>`).join(''):`<div class="empty"><div class="big">🫧</div><h3>Идеи кончились</h3><p>Добавьте новую</p></div>`; }
+Object.assign(acts,{
+ fl(t){ S.fl=t.dataset.k; renderBoard(); },
+ open(t){ go('video',{params:{id:t.dataset.id}}); },
+ stage(t){ const v=S.cur,i=+t.dataset.i; if(i>v.st){toast('Сначала завершите «'+ST[v.st][1]+'»');return;} const keep=v.st; v.st=i; renderVideo(v.id); v.st=Math.max(keep,i); },
+ aiscript(){ toast('Хук улучшен'); },
+ shotcopy(t){ const s=shotsFor(S.cur)[+t.dataset.i]; tgx.copy(STYLE+'. '+s); },
+ voice(t){ $$('#vseg button').forEach(b=>b.classList.toggle('on',b===t)); },
+ pcopy(t){ tgx.copy(PROMPTS[+t.dataset.i][1]); },
+ addidea(){ const v=$('#idea-in').value.trim(); if(!v){toast('Напишите тему');return;} IDEAS.unshift(v); $('#idea-in').value=''; sheet('sh-new',false); renderIdeas(); toast('Идея добавлена'); },
+ take(t){ const i=+t.dataset.i; const title=IDEAS.splice(i,1)[0]; V.unshift({id:'v'+Date.now(),e:'✨',c:'lav',t:title,st:0,fmt:'8 мин'}); renderIdeas(); toast('Взято в работу'); },
+ setch(t){ S.ch=t.dataset.n; $('#ch-name').textContent='Канал: '+S.ch; sheet('sh-ch',false); },
+});
+tgx.boot('board');
+</script></body></html>

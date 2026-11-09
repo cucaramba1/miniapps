@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Радар рилсов</title>
+<link rel="stylesheet" href="../shared/ds.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .tcard{display:block;align-self:start;width:100%;border-radius:var(--r-l);overflow:hidden;background:var(--surface);box-shadow:var(--shadow);transition:transform .15s var(--ease);text-align:left}
+  .tcard:active{transform:scale(.97)}
+  .thumb{aspect-ratio:9/13;display:flex;flex-direction:column;justify-content:space-between;padding:10px;position:relative;font-size:46px}
+  .thumb .em{margin:auto;font-size:52px}
+  .grow-b{position:absolute;left:8px;top:8px}
+  .views{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.85);color:#2A2831;border-radius:99px;padding:3px 9px;font-size:12px;font-weight:700}
+  .tmeta{padding:10px 12px 12px;font-size:13px;line-height:1.3;font-weight:600}
+  .big-thumb{height:300px;border-radius:var(--r-l);display:grid;place-items:center;font-size:90px;position:relative}
+  .play{position:absolute;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:24px;color:#2A2831;bottom:14px;right:14px}
+  .bars{display:flex;align-items:flex-end;gap:5px;height:56px} .bars i{flex:1;background:var(--lav);border-radius:6px 6px 2px 2px;transition:height .3s var(--ease)}
+  .bars i:last-child{background:var(--accent)}
+  .tl{display:flex;flex-direction:column;gap:0} .tl .st{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .tl .t{flex:none;width:52px;font-size:12px;color:var(--muted);padding-top:2px}
+  .rv{display:flex;flex-direction:column;gap:12px}
+  .act5{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .act5 button{min-height:56px;border-radius:var(--r-m);background:var(--surface-2);font-size:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:transform .15s}
+  .act5 button span{font-size:10px;color:var(--ink-2)} .act5 button:active{transform:scale(.92)}
+  .act5 button.on{background:var(--lav)}
+  .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:22px;flex:none}
+  .bubble{background:var(--surface);border-radius:20px 20px 20px 6px;padding:12px 14px;box-shadow:var(--shadow);font-size:15px}
+  .gen{white-space:pre-wrap}
+</style></head>
+<body>
+<button class="themebtn" data-testid="theme">🌗 тема</button>
+<div id="phone">
+ <div id="tgbar"><button id="tgback" aria-label="Назад" style="visibility:hidden">‹ Назад</button><span id="tgtitle">Радар рилсов</span><span>⋯</span></div>
+ <div id="app">
+
+  <section class="screen has-tabs" id="s-trends" data-testid="s-trends">
+    <div class="row between" style="margin-bottom:10px"><div><div class="muted sm">Обновлено сегодня в 06:00</div><h1>Тренды</h1></div><button class="chip" data-sheet="sh-niche" data-testid="open-niche">Ниши ▾</button></div>
+    <input class="input" id="q" placeholder="🔍  Поиск по темам и хукам" data-testid="search" style="margin-bottom:10px">
+    <div class="chips" id="stat"></div>
+    <div class="grid" id="tgrid" data-testid="tgrid"></div>
+  </section>
+
+  <section class="screen" id="s-trend" data-testid="s-trend"></section>
+  <section class="screen" id="s-adapt" data-testid="s-adapt">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Адаптация под мою нишу</h2></div>
+    <div class="card col">
+      <b>Моя ниша</b><div class="chips" id="adn"></div>
+      <b>Формат</b><div class="seg" id="adf"><button class="on" data-act="adf" data-k="reel">Рилс</button><button data-act="adf" data-k="thread">Тред</button><button data-act="adf" data-k="carousel">Карусель</button></div>
+      <button class="btn" data-act="gen" data-testid="gen">✨ Сгенерировать сценарий</button>
+    </div>
+    <div id="genout" style="margin-top:12px"></div>
+  </section>
+
+  <section class="screen has-tabs" id="s-search" data-testid="s-search">
+    <h1 style="margin-bottom:12px">Поиск</h1>
+    <div class="seg" id="smode" style="margin-bottom:12px"><button class="on" data-act="smode" data-k="kw" data-testid="sm-kw">По слову</button><button data-act="smode" data-k="link" data-testid="sm-link">По ссылке</button></div>
+    <div id="sbody"></div>
+  </section>
+
+  <section class="screen has-tabs" id="s-radar" data-testid="s-radar">
+    <div class="row between" style="margin-bottom:12px"><h1>Радар</h1><button class="chip" data-sheet="sh-add" data-testid="add-author">＋ Автор</button></div>
+    <p class="muted sm" style="margin-bottom:12px">Следим за авторами и ловим всплески просмотров раньше всех.</p>
+    <div class="chips" id="kwlist" data-testid="kwlist"></div>
+    <div class="col" id="authors" data-testid="authors"></div>
+  </section>
+  <section class="screen" id="s-author" data-testid="s-author"></section>
+
+  <section class="screen has-tabs" id="s-inbox" data-testid="s-inbox">
+    <div class="row between" style="margin-bottom:6px"><h1>Сохранёнки</h1><span class="pill p-lav" id="inb-n">0 новых</span></div>
+    <p class="muted sm" style="margin-bottom:12px">Разбор бота: оставить, отклонить или сменить цель.</p>
+    <div id="rv" data-testid="rv"></div>
+  </section>
+
+  <section class="screen has-tabs" id="s-digest" data-testid="s-digest">
+    <h1 style="margin-bottom:4px">Дайджест недели</h1><div class="muted sm" style="margin-bottom:12px">Воскресенье, 19:00</div>
+    <div class="col" id="dg"></div>
+  </section>
+
+  <section class="screen" id="s-settings" data-testid="s-settings">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Настройки</h2></div>
+    <div class="card col">
+      <div class="row between"><div><h3>Утренний дайджест</h3><div class="muted sm">Топ-5 в 09:00</div></div><button class="switch on" data-act="switch" data-testid="sw-digest" aria-label="Дайджест"></button></div>
+      <div class="hr"></div>
+      <div class="row between"><div><h3>Алерт на всплеск</h3><div class="muted sm">Когда рилс автора вырос ×3</div></div><button class="switch" data-act="switch" data-testid="sw-spike" aria-label="Алерт"></button></div>
+    </div>
+  </section>
+
+  <nav class="tabbar" data-testid="tabbar">
+    <button class="tab" data-go="trends" data-testid="tab-trends"><span class="ico">🔥</span>Тренды</button>
+    <button class="tab" data-go="search" data-testid="tab-search"><span class="ico">🔎</span>Поиск</button>
+    <button class="tab" data-go="radar" data-testid="tab-radar"><span class="ico">📡</span>Радар</button>
+    <button class="tab" data-go="inbox" data-testid="tab-inbox"><span class="ico">📥</span>Сохранёнки</button>
+    <button class="tab" data-go="digest" data-testid="tab-digest"><span class="ico">📰</span>Дайджест</button>
+  </nav>
+  <button id="mainbtn" data-testid="mainbtn"></button>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sh-niche" data-testid="sh-niche"><div class="grab"></div><h2 style="margin-bottom:12px">Ниши</h2>
+    <div class="chips" id="niches" style="flex-wrap:wrap;overflow:visible"></div>
+    <div class="row" style="margin-top:14px"><button class="btn ghost grow" data-act="nreset" data-testid="niche-reset">Сбросить</button><button class="btn grow" data-act="napply" data-testid="niche-apply">Применить</button></div></div>
+  <div class="sheet" id="sh-add" data-testid="sh-add"><div class="grab"></div><h2 style="margin-bottom:12px">Добавить автора</h2>
+    <input class="input" id="auth-in" placeholder="@username или ссылка" data-testid="auth-in"><div class="muted xs" style="margin:6px 0 12px">Публичные аккаунты. Мы не логинимся за вас.</div>
+    <button class="btn block" data-act="addauth" data-testid="auth-add">Добавить</button></div>
+  <div class="sheet" id="sh-tag" data-testid="sh-tag"><div class="grab"></div><h2 style="margin-bottom:12px">Сменить цель</h2><div class="col" id="tags"></div></div>
+  <div class="toast" id="toast" role="status"></div>
+ </div>
+</div>
+<script src="../shared/tgx.js"></script>
+<script>
+const {$,$$,go,toast,setMain,sheet,register,acts}=tgx;
+const NICHES=['Дом','Путешествия','Лайфстайл','Фитнес','ИИ','Еда','Финансы','Юмор'];
+const TR=[ // demo data: invented examples, shape mirrors reels-radar items (topic, hook, structure)
+ {id:'t1',e:'🫙',c:'peach',n:'Лайфстайл',v:2200,g:310,hook:'Пустые баночки косметики: следующий месяц будет дорогим',dur:18,sound:'Original audio · 128k роликов',struct:['0–2 с: крупный план пустой баночки + текст-крючок','2–8 с: три приёма «что я делаю вместо покупки»','8–15 с: результат до/после','15–18 с: CTA «сохрани, чтобы не забыть»'],tr:'Следующий месяц будет дорогим, поэтому я собрала все пустые баночки и показываю, чем их заменить…',hist:[20,25,30,45,70,100],an:3.4},
+ {id:'t2',e:'🏝️',c:'sky',n:'Путешествия',v:1400,g:180,hook:'Сколько стоит неделя на острове, если жить как местный',dur:24,sound:'Trending · lo-fi 2.1M',struct:['0–3 с: итоговая сумма цифрами','3–15 с: статьи расходов по дням','15–22 с: что бы я сделал иначе','22–24 с: подписка на маршрут'],tr:'Неделя на острове обошлась мне в 280 долларов, и вот куда ушли деньги…',hist:[30,34,40,55,80,100]},
+ {id:'t3',e:'🤖',c:'lav',n:'ИИ',v:980,g:240,hook:'Я попросил ИИ спланировать мне день и вот что вышло',dur:21,sound:'Original audio',struct:['0–2 с: скрин промпта','2–12 с: ответ ИИ по пунктам','12–19 с: что реально сработало','19–21 с: промпт в комментарии'],tr:'Я скормил нейросети своё расписание и попросил собрать идеальный день…',hist:[12,20,28,60,85,100],an:5.1},
+ {id:'t4',e:'🥑',c:'mint',n:'Еда',v:760,g:95,hook:'Завтрак за 3 минуты, который держит до обеда',dur:15,sound:'Trending · piano 410k',struct:['0–2 с: готовое блюдо','2–11 с: три шага рецепта','11–15 с: цена порции'],tr:'Беру авокадо, яйцо и творожный сыр, всё идёт в одну тарелку…',hist:[40,48,55,60,75,100]},
+ {id:'t5',e:'🏠',c:'butter',n:'Дом',v:610,g:140,hook:'Квартира за 20 млн донгов: что вы получите на самом деле',dur:27,sound:'Original audio',struct:['0–3 с: цена и город','3–20 с: обход комнат','20–27 с: плюсы и минусы'],tr:'Двадцать миллионов донгов в месяц, и вот что за это дают в Нячанге…',hist:[15,22,35,50,72,100]},
+ {id:'t6',e:'💪',c:'rose',n:'Фитнес',v:530,g:75,hook:'Тренировка на 10 минут вместо часа в зале',dur:19,sound:'Trending · beat 880k',struct:['0–2 с: «10 минут»','2–15 с: четыре упражнения','15–19 с: результат через месяц'],tr:'Не нужен зал, нужно десять минут и коврик…',hist:[35,40,45,50,70,100]},
+];
+const AUT=[
+ {id:'a1',h:'@nomad.kitchen',e:'🍳',c:'mint',f:'412k',spike:true,last:[30,35,28,90,40,45],n:'Еда'},
+ {id:'a2',h:'@vietnam.daily',e:'🌴',c:'sky',f:'88k',spike:false,last:[20,24,22,26,30,28],n:'Путешествия'},
+ {id:'a3',h:'@ai.in.minutes',e:'🧠',c:'lav',f:'1.1M',spike:true,last:[40,42,95,50,60,55],n:'ИИ'},
+];
+const INB=[
+ {id:'i1',purpose:'content',theme:'Лайфстайл',txt:'Шаблон «до/после» на 15 секунд: крючок цифрой, три шага, итог.',e:'🎬'},
+ {id:'i2',purpose:'claude',theme:'ИИ',txt:'Приём: заводить отдельный файл правил на каждый проект, а не один общий.',e:'🧩'},
+ {id:'i3',purpose:'note',theme:'Вьетнам',txt:'Где проверять свет и воду при просмотре квартиры.',e:'📝'},
+ {id:'i4',purpose:'friend',theme:'Юмор',txt:'Смешной рилс про переезд, переслать другу.',e:'😂'},
+];
+const PUR={content:['p-peach','Для рилса'],claude:['p-lav','Для Claude'],note:['p-mint','Заметка'],product:['p-sky','Продукт'],friend:['p-rose','Другу']};
+const S={niche:new Set(),stat:'all',q:'',cur:null,fmt:'reel',myn:'Лайфстайл',saved:new Set(),kws:['баночки'],smode:'kw',sq:'',inb:[...INB],authors:[...AUT],tagFor:null,done:{keep:0,drop:0}};
+const fmtV=v=>v>=1000?(v/1000).toFixed(1).replace('.0','')+' млн':v+' тыс';
+const bg=c=>`background:var(--${c})`;
+
+function filtered(){ return TR.filter(t=>(!S.niche.size||S.niche.has(t.n)) && (S.stat==='all'||(S.stat==='grow'&&t.g>=150)||(S.stat==='anom'&&t.an)||(S.stat==='new'&&t.v<800)) && (!S.q||(t.hook+t.n).toLowerCase().includes(S.q.toLowerCase()))); }
+function renderTrends(){
+  $('#stat').innerHTML=[['all','Все'],['grow','🚀 Растёт'],['anom','⚡ Аномалии'],['new','🌱 Новые']].map(([k,n])=>`<button class="chip ${S.stat===k?'on':''}" data-act="stat" data-k="${k}" data-testid="stat-${k}">${n}</button>`).join('');
+  const l=filtered();
+  $('#tgrid').innerHTML=l.length?l.map(t=>`<button class="tcard" data-act="open" data-id="${t.id}" data-testid="tr-${t.id}"><div class="thumb" style="${bg(t.c)}"><span class="pill p-mint grow-b">↑ ${t.g}%</span><span class="em">${t.e}</span><span class="views">▶ ${fmtV(t.v)}</span></div><div class="tmeta">${t.hook}</div></button>`).join(''):`<div class="empty" style="grid-column:1/-1"><div class="big">🔭</div><h3>Ничего не нашли</h3><p>Попробуйте другую нишу</p><button class="btn" style="margin-top:12px" data-act="nreset" data-testid="empty-reset">Сбросить</button></div>`;
+}
+function renderTrend(id){
+  const t=TR.find(x=>x.id===id); S.cur=t;
+  $('#s-trend').innerHTML=`<div class="top"><button class="back" data-back aria-label="Назад">‹</button><span class="grow"></span><button class="back" data-act="save" data-testid="t-save" aria-label="Сохранить">${S.saved.has(t.id)?'🔖':'🏷️'}</button></div>
+  <div class="big-thumb" style="${bg(t.c)}">${t.e}<span class="play">▶</span></div>
+  <div class="row wrap" style="margin:14px 0 8px;gap:8px"><span class="pill p-mint">↑ ${t.g}% за неделю</span><span class="pill p-sky">${fmtV(t.v)} просмотров</span><span class="pill p-lav">${t.n}</span>${t.an?`<span class="pill p-peach">⚡ ×${t.an} к подписчикам автора</span>`:''}</div>
+  <h1 style="font-size:22px">${t.hook}</h1>
+  <div class="card" style="margin-top:14px"><div class="muted xs" style="margin-bottom:8px">Рост просмотров</div><div class="bars">${t.hist.map(h=>`<i style="height:${h}%"></i>`).join('')}</div></div>
+  <div class="card col" style="margin-top:12px"><h3>Структура</h3><div class="tl">${t.struct.map(s=>{const [a,b]=s.split(': ');return `<div class="st"><span class="t">${a}</span><span>${b}</span></div>`}).join('')}</div><div class="row wrap" style="gap:8px"><span class="pill p-peach">${t.dur} сек</span><span class="pill p-butter">${t.sound}</span></div></div>
+  <div class="card col" style="margin-top:12px"><h3>Транскрипт</h3><p class="muted sm">${t.tr}</p></div>
+  <div class="row" style="margin:12px 0 0"><button class="btn ghost grow" data-act="remake" data-testid="t-remake">Пересъёмка</button></div>`;
+  setMain('Адаптировать под мою нишу',()=>go('adapt'));
+}
+function genText(){
+  const t=S.cur||TR[0], n=S.myn, f=S.fmt;
+  const head=f==='reel'?'🎬 РИЛС':f==='thread'?'🧵 ТРЕД':'🖼 КАРУСЕЛЬ';
+  return `${head} · ниша «${n}» · по мотивам «${t.hook}»\n\nТриггер: любопытство\nХук, вариант 1 (0–2 с): «Я проверил это в «${n}», и вот что произошло»\nХук, вариант 2: «Никто в «${n}» не говорит об этом»\nХук, вариант 3: «${t.dur} секунд, которые сэкономят вам месяц»\n\n`+t.struct.slice(1).map((s,i)=>`Блок ${i+1}: ${s.split(': ')[1]}, перенесён в тему «${n}»`).join('\n')+`\n\nФинал: призыв сохранить и написать в комментариях «${n.toLowerCase()}»\nДлительность: ~${t.dur} с · Звук: ${t.sound}`;
+}
+function renderKws(){ $('#kwlist').innerHTML=S.kws.map((k,i)=>`<span class="chip on">🔎 ${tgx.esc(k)} <button data-act="dropkw" data-i="${i}" aria-label="Убрать слово" data-testid="kw-del-${i}" style="min-width:36px;min-height:36px">✕</button></span>`).join(''); }
+function kwMatch(q){ q=q.toLowerCase(); return TR.filter(t=>(t.hook+' '+t.n+' '+t.struct.join(' ')).toLowerCase().includes(q)); }
+function renderSearch(){
+  $$('#smode button').forEach(b=>b.classList.toggle('on',b.dataset.k===S.smode));
+  if(S.smode==='kw'){
+    $('#sbody').innerHTML=`<div class="card col" style="background:var(--lav)"><input class="input" id="kw" placeholder="Ключевое слово, например «баночки»" data-testid="kw-in" value="${tgx.esc(S.sq)}"><button class="btn" data-act="dosearch" data-testid="kw-go">Найти видео</button></div><div id="sres" style="margin-top:12px"></div>`;
+    if(S.sq) showResults();
+  } else {
+    $('#sbody').innerHTML=`<div class="card col"><input class="input" id="lnk" placeholder="Ссылка на рилс или TikTok" data-testid="lnk-in"><button class="btn" data-act="dolink" data-testid="lnk-go">Разобрать видео</button><div class="muted xs">Покажем хук, структуру и звук, чтобы повторить приём в своей нише.</div></div><div id="sres" style="margin-top:12px"></div>`;
+  }
+}
+function showResults(){
+  const l=kwMatch(S.sq);
+  $('#sres').innerHTML=l.length?`<div class="row between" style="margin-bottom:10px"><b>Найдено ${l.length}</b><button class="chip" data-act="addkw" data-testid="kw-add">＋ Добавить в радар</button></div><div class="grid">${l.map(t=>`<button class="tcard" data-act="open" data-id="${t.id}" data-testid="sr-${t.id}"><div class="thumb" style="${bg(t.c)}"><span class="pill p-mint grow-b">↑ ${t.g}%</span><span class="em">${t.e}</span><span class="views">▶ ${fmtV(t.v)}</span></div><div class="tmeta">${t.hook}</div></button>`).join('')}</div>`:`<div class="empty"><div class="big">🔭</div><h3>Ничего не нашли</h3><p>Попробуйте другое слово</p></div>`;
+}
+function renderAuthors(){
+  $('#authors').innerHTML=S.authors.length?S.authors.map(a=>`<button class="card tap row" data-act="author" data-id="${a.id}" data-testid="au-${a.id}" style="text-align:left"><span class="av" style="${bg(a.c)}">${a.e}</span><div class="grow"><h3>${tgx.esc(a.h)}</h3><div class="muted sm">${a.f} · ${a.n}</div></div>${a.spike?'<span class="pill p-peach">⚡ всплеск</span>':'›'}</button>`).join(''):`<div class="empty"><div class="big">📡</div><h3>Радар пуст</h3><p>Добавьте первого автора</p></div>`;
+}
+function renderAuthor(id){
+  const a=S.authors.find(x=>x.id===id); S.curA=a;
+  $('#s-author').innerHTML=`<div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>${tgx.esc(a.h)}</h2></div>
+  <div class="card col"><div class="row"><span class="av" style="${bg(a.c)}">${a.e}</span><div class="grow"><div class="muted sm">Подписчиков</div><b>${a.f}</b></div>${a.spike?'<span class="pill p-peach">⚡ всплеск</span>':''}</div>
+  <div class="muted xs">Просмотры последних 6 рилсов</div><div class="bars">${a.last.map(h=>`<i style="height:${h}%"></i>`).join('')}</div></div>
+  <button class="btn ghost block" style="margin-top:12px" data-act="unfollow" data-testid="au-remove">Убрать из радара</button>`;
+  setMain(null);
+}
+function renderInbox(){
+  $('#inb-n').textContent=S.inb.length+' новых';
+  if(!S.inb.length){ $('#rv').innerHTML=`<div class="empty"><div class="big">🎉</div><h3>Всё разобрано</h3><p>Оставлено: ${S.done.keep} · отклонено: ${S.done.drop}</p></div>`; return; }
+  const c=S.inb[0], p=PUR[c.purpose];
+  $('#rv').innerHTML=`<div class="card col" data-testid="rv-card"><div class="row"><span class="av" style="background:var(--surface-2)">${c.e}</span><div class="grow"><span class="pill ${p[0]}">${p[1]}</span><div class="muted xs" style="margin-top:4px">Тема: ${c.theme}</div></div></div><p>${c.txt}</p>
+  <div class="act5"><button data-act="keep" data-testid="rv-keep">✅<span>Оставить</span></button><button data-act="drop" data-testid="rv-drop">❌<span>Отклонить</span></button><button data-act="edit" data-testid="rv-edit">✏️<span>Правка</span></button><button data-act="tag" data-testid="rv-tag">🏷<span>Цель</span></button></div></div>
+  <div class="muted xs" style="text-align:center;margin-top:10px">Ещё в очереди: ${S.inb.length-1}</div>`;
+}
+function renderDigest(){
+  $('#dg').innerHTML=`<div class="card col"><span class="pill p-peach">Использовать сразу</span>${TR.slice(0,3).map(t=>`<button class="row" data-act="open" data-id="${t.id}" style="text-align:left"><span class="av" style="${bg(t.c)}">${t.e}</span><div class="grow"><b class="sm">${t.hook}</b><div class="muted xs">↑ ${t.g}% · ${t.dur} с</div></div>›</button>`).join('')}</div>
+  <div class="card col"><span class="pill p-lav">Фичи и приёмы Claude</span><p class="sm">Отдельный файл правил на проект, ограничение памяти для фоновых задач.</p></div>
+  <div class="card col"><span class="pill p-mint">Слова и фразы</span><p class="sm">«Задел на будущее» · «взять на себя» · «по-хорошему»</p></div>
+  <div class="card col"><span class="pill p-butter">Нужен файл</span><p class="sm">2 рилса не скачались, пришлите видео боту.</p></div>`;
+}
+register({
+ trends:{title:'Радар рилсов',tab:'trends',enter(){renderTrends();setMain(null);}},
+ trend:{title:'Тренд',parentTab:'trends',hideTabs:true,enter(el,p){renderTrend(p.id);}},
+ adapt:{title:'Адаптация',hideTabs:true,enter(){ $('#adn').innerHTML=NICHES.map(n=>`<button class="chip ${S.myn===n?'on':''}" data-act="myn" data-n="${n}" data-testid="adn-${n}">${n}</button>`).join(''); $('#genout').innerHTML=''; setMain(null);}},
+ search:{title:'Поиск',tab:'search',enter(){renderSearch();setMain(null);}},
+ radar:{title:'Радар',tab:'radar',enter(){renderKws();renderAuthors();setMain(null);}},
+ author:{title:'Автор',parentTab:'radar',hideTabs:true,enter(el,p){renderAuthor(p.id);}},
+ inbox:{title:'Сохранёнки',tab:'inbox',enter(){renderInbox();setMain(null);}},
+ digest:{title:'Дайджест',tab:'digest',enter(){renderDigest();setMain(null);}},
+ settings:{title:'Настройки',hideTabs:true,enter(){setMain(null);}},
+});
+Object.assign(acts,{
+ smode(t){ S.smode=t.dataset.k; renderSearch(); },
+ dosearch(){ const v=$('#kw').value.trim(); if(!v){toast('Введите слово');return;} S.sq=v; showResults(); },
+ addkw(){ const v=S.sq; if(!v) return; if(S.kws.includes(v)){toast('Уже в радаре');return;} S.kws.push(v); toast('Слово добавлено в радар'); },
+ dropkw(t){ S.kws.splice(+t.dataset.i,1); renderKws(); },
+ dolink(){ const v=$('#lnk').value.trim(); if(!/(instagram\.com|tiktok\.com)\//i.test(v)){ toast('Нужна ссылка на рилс или TikTok'); return; }
+   const t=TR[0]; $('#sres').innerHTML=`<div class="card col" data-testid="lnk-res"><span class="pill p-mint">Разбор готов</span><div class="muted xs" style="overflow-wrap:anywhere">${tgx.esc(v)}</div><h3>${t.hook}</h3><div class="tl">${t.struct.map(x=>{const [a,b]=x.split(': ');return `<div class="st"><span class="t">${a}</span><span>${b}</span></div>`}).join('')}</div><div class="row wrap" style="gap:8px"><span class="pill p-peach">${t.dur} сек</span><span class="pill p-butter">${t.sound}</span></div><div class="muted xs">Демо-разбор, в боевой версии считается по вашему видео.</div></div>`; },
+ open(t){ go('trend',{params:{id:t.dataset.id}}); },
+ stat(t){ S.stat=t.dataset.k; renderTrends(); },
+ nreset(){ S.niche.clear(); S.stat='all'; S.q=''; $('#q').value=''; renderNiches(); renderTrends(); },
+ napply(){ sheet('sh-niche',false); renderTrends(); },
+ nsel(t){ const n=t.dataset.n; S.niche.has(n)?S.niche.delete(n):S.niche.add(n); renderNiches(); },
+ save(){ const t=S.cur; S.saved.has(t.id)?S.saved.delete(t.id):S.saved.add(t.id); toast(S.saved.has(t.id)?'Сохранено в Obsidian':'Убрано'); renderTrend(t.id); },
+ remake(){ toast('Чек-лист пересъёмки добавлен в задачи'); },
+ myn(t){ S.myn=t.dataset.n; $$('#adn .chip').forEach(c=>c.classList.toggle('on',c.dataset.n===S.myn)); },
+ adf(t){ S.fmt=t.dataset.k; $$('#adf button').forEach(b=>b.classList.toggle('on',b===t)); },
+ gen(){ $('#genout').innerHTML='<div class="skel" style="height:120px"></div>'; setTimeout(()=>{ if(tgx.state.current!=='adapt')return;
+   $('#genout').innerHTML=`<div class="card col"><div class="bubble gen" data-testid="gen-out">${genText().replace(/</g,'&lt;')}</div><div class="row"><button class="btn ghost grow" data-act="gcopy" data-testid="gen-copy">Копировать</button><button class="btn grow" data-act="gsave" data-testid="gen-save">В заметки</button></div></div>`; },600); },
+ gcopy(){ tgx.copy(genText()); },
+ gsave(){ toast('Сохранено в «Идеи для Cucaramba TV»'); },
+ author(t){ go('author',{params:{id:t.dataset.id}}); },
+ unfollow(){ S.authors=S.authors.filter(a=>a!==S.curA); toast('Убрано из радара'); tgx.back(); renderAuthors(); },
+ addauth(){ const v=$('#auth-in').value.trim(); if(!v){toast('Введите @username');return;}
+   const h=v.startsWith('@')?v:'@'+v.replace(/^https?:\/\/(www\.)?instagram\.com\//,'').replace(/\/.*/,''); S.authors.push({id:'a'+Date.now(),h,e:'✨',c:'rose',f:'н/д',spike:false,last:[20,20,20,20,20,20],n:'Новый'}); $('#auth-in').value=''; sheet('sh-add',false); renderAuthors(); toast('Автор добавлен'); },
+ keep(){ S.done.keep++; S.inb.shift(); toast('Записано в vault'); renderInbox(); },
+ drop(){ S.done.drop++; S.inb.shift(); toast('Отклонено'); renderInbox(); },
+ edit(){ toast('Правка текста откроется в боте'); },
+ tag(){ $('#tags').innerHTML=Object.entries(PUR).map(([k,[c,n]])=>`<button class="btn ghost block" data-act="settag" data-k="${k}" data-testid="tag-${k}">${n}</button>`).join(''); sheet('sh-tag',true); },
+ settag(t){ S.inb[0].purpose=t.dataset.k; sheet('sh-tag',false); renderInbox(); },
+ switch(t){ t.classList.toggle('on'); },
+});
+function renderNiches(){ $('#niches').innerHTML=NICHES.map(n=>`<button class="chip ${S.niche.has(n)?'on':''}" data-act="nsel" data-n="${n}" data-testid="nc-${n}">${n}</button>`).join(''); }
+document.addEventListener('input',e=>{ if(e.target.id==='q'){ S.q=e.target.value; renderTrends(); }});
+document.addEventListener('keydown',e=>{ if(e.key==='Enter'&&e.target.id==='kw') acts.dosearch(); });
+document.addEventListener('click',e=>{ if(e.target.closest('[data-sheet=sh-niche]')) renderNiches(); });
+tgx.boot('trends');
+</script></body></html>

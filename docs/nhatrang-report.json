@@ -1,0 +1,1387 @@
+{
+ "total": 276,
+ "failed": 0,
+ "secs": 100,
+ "results": [
+  {
+   "name": "онбординг виден при первом запуске",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "после онбординга открыт экран Проверить",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "повторный запуск без онбординга",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "таб check: активен ровно один экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "таб free: активен ровно один экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "таб realtors: активен ровно один экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "таб favs: активен ровно один экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "таб profile: активен ровно один экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "без initData и без dev: экран «Откройте из Telegram»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "dev=нечисло не пускает",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "в js/ нет innerHTML/outerHTML/insertAdjacentHTML/document.write",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "нет длинного тире в интерфейсе",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "карточки мест загружены",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "поиск «vinh hai» находит место с диакритикой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "XSS-название отображено текстом",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "XSS не сработал",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Leaflet загружен (cdnjs)",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "на карте подпись района из фикстуры",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "без доступа в DOM нет текста отзыва",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "без доступа есть счётчики жалоб",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "без доступа есть блок оплаты",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "пустое место: честная плашка",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "пустое место: нет кнопки оплаты",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "с доступом видны тексты отзывов",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Свободно без доступа: нет ников и ссылок",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Свободно без доступа: есть кнопка открытия",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "HTML в названии объявления показан текстом",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "фильтр «только с местом» оставляет одно",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Риелторы без доступа: нет контактов",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "метка «без комиссии» ровно у одного (подтверждённого)",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Свободно с доступом: контакты есть",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "Риелторы с доступом: контакты есть",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "избранное: место появилось",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "избранное: пустое состояние, не пустой экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "флажок сохранён на сервере",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "флажок после перезагрузки на месте",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "геопозиция: «вы в N м»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "149 символов: кнопка отправки неактивна",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "150 символов: кнопка активна",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "150 эмодзи (по символам, не по UTF-16): активна",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "1 фото: кнопка неактивна",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "успешная отправка показывает «+3 дня»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "после отзыва доступ открыт",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "геопозиция далеко от другого места",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "~500 м от места: «вы далеко»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "второй отзыв в день: человеческий текст про лимит",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "добавление места: без точки кнопка неактивна",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "новое место: «на проверке»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "профиль без доступа: «Доступа нет»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "paywall: два тарифа",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "paywall: цена 300 Stars",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "вне Telegram оплата сообщает «откройте из Telegram»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "нет карты и QR Bybit",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата paid: invoice от сервера с payload плана",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата paid: экран «Доступ открыт»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата cancelled: invoice от сервера с payload плана",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата cancelled: остаёмся на paywall без изменений",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата failed: invoice от сервера с payload плана",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "оплата failed: ошибка и «Повторить»",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 360px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 390px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px light: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px light: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px light: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px light: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка check 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка free 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка realtors 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка favs 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка profile 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка pay 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка place 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка review 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px dark: один активный экран",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px dark: нет горизонтального скролла",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px dark: не пустой",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "раскладка addplace 430px dark: тап-зоны от 36px",
+   "pass": true,
+   "extra": ""
+  },
+  {
+   "name": "нет ошибок в консоли/pageerror",
+   "pass": true,
+   "extra": ""
+  }
+ ]
+}

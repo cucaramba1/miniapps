@@ -1,0 +1,16 @@
+[Unit]
+Description=Nhatrang Dom (FastAPI + SQLite)
+After=network.target
+
+[Service]
+User=nhatrang
+WorkingDirectory=/opt/nhatrang/server
+EnvironmentFile=/opt/nhatrang/.env
+# ОДИН воркер: SQLite с WAL, записи сериализуются, лишние воркеры только мешают
+ExecStart=/opt/nhatrang/server/.venv/bin/uvicorn app.main:create_app --factory --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=3
+MemoryMax=400M
+
+[Install]
+WantedBy=multi-user.target

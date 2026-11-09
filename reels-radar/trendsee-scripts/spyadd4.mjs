@@ -1,0 +1,14 @@
+import { chromium } from '/Users/cucaramba/Claude Code/miniapps/tests/node_modules/playwright-core/index.mjs';
+const dir = '/private/tmp/claude-501/-Users-cucaramba-Claude-Code/3b6d4bbe-9669-4e7a-b31d-12de453aedf1/scratchpad/';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9333');
+const p = b.contexts()[0].pages().slice(-1)[0];
+const tokens = async () => ((await p.innerText('body')).match(/Осталось токенов:?\s*(\d+)/) || [])[1];
+const t0 = await tokens();
+await p.getByRole('button', { name: /^Добавить\s*12/ }).first().click();
+await p.waitForTimeout(25000);
+await p.screenshot({ path: dir + 'spy_done.png' });
+const body = (await p.innerText('body')).replace(/\s+/g, ' ');
+console.log(p.url());
+console.log(body.slice(body.indexOf('Осталось токенов'), body.indexOf('Осталось токенов') + 2500));
+console.log('tokens', t0, '->', await tokens());
+await b.close();

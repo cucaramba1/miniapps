@@ -1,0 +1,20 @@
+import { chromium } from '/Users/cucaramba/Claude Code/miniapps/tests/node_modules/playwright-core/index.mjs';
+import fs from 'fs';
+const dir = '/private/tmp/claude-501/-Users-cucaramba-Claude-Code/3b6d4bbe-9669-4e7a-b31d-12de453aedf1/scratchpad/';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9333');
+const p = b.contexts()[0].pages().slice(-1)[0];
+const tokens = async () => ((await p.innerText('body')).match(/Осталось токенов:?\s*(\d+)/) || [])[1];
+await p.goto('https://app2.trendsee.io/search/ai?history_id=110376', { waitUntil: 'domcontentloaded' });
+await p.waitForTimeout(8000);
+const t0 = await tokens();
+await p.getByRole('button', { name: /Получить отчет/ }).first().click();
+let body = '';
+for (let i = 0; i < 24; i++) { await p.waitForTimeout(5000); body = (await p.innerText('body')).replace(/\s+/g, ' '); if (i > 2 && !/Генерируем|Формируем|Загрузка/.test(body)) break; }
+await p.waitForTimeout(3000);
+await p.screenshot({ path: dir + 'niche.png', fullPage: false });
+body = (await p.innerText('body')).replace(/\s+/g, ' ');
+fs.writeFileSync(dir + 'niche.txt', body);
+console.log(p.url());
+console.log(body.slice(body.indexOf('Анализ ниши'), body.indexOf('Анализ ниши') + 5000));
+console.log('tokens', t0, '->', await tokens());
+await b.close();

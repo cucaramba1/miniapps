@@ -1,0 +1,112 @@
+<title>Пастельные мини-аппы</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: one calm column; each project is a band with a horizontal strip of real screens. */
+:root{
+  --bg:#FAF7F2; --surface:#FFFFFF; --ink:#2A2831; --ink2:#55526A; --muted:#6B677A; --line:#ECE6DC;
+  --lav:#DDD7F6; --lav-ink:#50479A; --mint:#CFEBDD; --mint-ink:#2F6B52; --peach:#FFDDCB; --peach-ink:#9A4F2B;
+  --accent:#6B5DD3; --accent-ink:#FFFFFF; --shadow:0 1px 2px rgba(42,40,49,.05),0 10px 30px rgba(42,40,49,.07);
+  --font:"Onest",-apple-system,"SF Pro Text",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1D1C23; --surface:#27262F; --ink:#F1EFF6; --ink2:#C5C2D1; --muted:#9A97A8; --line:#3A3945;
+  --lav:#3B3763; --lav-ink:#D7D1FA; --mint:#2E4A3F; --mint-ink:#BFE8D3; --peach:#5A3E31; --peach-ink:#FFD3BC;
+  --accent:#A99EF2; --accent-ink:#1D1C23; --shadow:0 1px 2px rgba(0,0,0,.2),0 10px 30px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1D1C23; --surface:#27262F; --ink:#F1EFF6; --ink2:#C5C2D1; --muted:#9A97A8; --line:#3A3945;
+  --lav:#3B3763; --lav-ink:#D7D1FA; --mint:#2E4A3F; --mint-ink:#BFE8D3; --peach:#5A3E31; --peach-ink:#FFD3BC;
+  --accent:#A99EF2; --accent-ink:#1D1C23; --shadow:0 1px 2px rgba(0,0,0,.2),0 10px 30px rgba(0,0,0,.25); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--font);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1{font-size:clamp(30px,6vw,46px);line-height:1.08;letter-spacing:-.025em;margin:0;font-weight:700;text-wrap:balance}
+h2{font-size:clamp(22px,4vw,28px);letter-spacing:-.02em;margin:0;font-weight:650;text-wrap:balance}
+h3{font-size:16px;margin:0 0 6px;font-weight:600}
+p{margin:0;max-width:62ch;color:var(--ink2)}
+.lead{font-size:18px;margin-top:14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:99px;background:var(--lav);color:var(--lav-ink);margin-bottom:14px}
+.band{display:flex;flex-direction:column;gap:18px}
+.strip{display:flex;gap:14px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.strip figure{margin:0;flex:none;width:200px;scroll-snap-align:start}
+.strip img{width:200px;height:auto;display:block;border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.strip figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:16px;background:var(--accent);color:var(--accent-ink);font-weight:650;text-decoration:none}
+.btn:focus-visible{outline:3px solid var(--lav-ink);outline-offset:2px}
+.btn.ghost{background:var(--lav);color:var(--lav-ink)}
+.tbl{overflow-x:auto;background:var(--surface);border-radius:22px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);font-size:15px}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.ok{color:var(--mint-ink);font-weight:600} .warn{color:var(--peach-ink);font-weight:600}
+.callout{background:var(--peach);color:var(--peach-ink);border-radius:22px;padding:20px}
+.callout p{color:inherit}
+.callout h3{margin-bottom:8px}
+.callout ul{margin:10px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+</style>
+
+<main>
+  <header>
+    <span class="tag">Прототипы для Telegram</span>
+    <h1>Два мини-аппа в пастели и два плана запуска</h1>
+    <p class="lead">Жильё в Нячанге и радар рилсов в духе Trendsee: кликабельные макеты, где работает каждая кнопка. Для канала без лица и ИИ-персонажа готовы планы с нишами и визуальным стилем.</p>
+  </header>
+
+  <section class="band" id="nhatrang">
+    <div><span class="tag">Главный продукт</span><h2>Нячанг Дом</h2></div>
+    <p>Лента из 6 реальных объявлений твоего поиска, смотреть можно бесплатно. Платным стал контакт хозяина: 3 бесплатных, дальше доступ на 3 дня или неделю. Внутри гид: популярные места бесплатно, нишевые за оплату, гайды по адаптации, каталог риелторов и проверка договора. Оплата: Telegram Stars первой, карта и QR Bybit второй.</p>
+    <div class="strip" role="list">
+      <figure role="listitem"><img src="shots/nt-home.png" alt="Лента объявлений" loading="lazy"><figcaption>Лента и бесплатные контакты</figcaption></figure>
+      <figure role="listitem"><img src="shots/nt-detail.png" alt="Карточка объявления" loading="lazy"><figcaption>Карточка, контакт скрыт</figcaption></figure>
+      <figure role="listitem"><img src="shots/nt-guide.png" alt="Гид по Нячангу" loading="lazy"><figcaption>Гид и карта мест</figcaption></figure>
+      <figure role="listitem"><img src="shots/nt-paywall.png" alt="Тарифы" loading="lazy"><figcaption>3 дня или неделя</figcaption></figure>
+      <figure role="listitem"><img src="shots/nt-pay.png" alt="Оплата Stars" loading="lazy"><figcaption>Оплата Stars</figcaption></figure>
+      <figure role="listitem"><img src="shots/nt-guide-dark.png" alt="Тёмная тема" loading="lazy"><figcaption>Тёмная тема</figcaption></figure>
+    </div>
+    <div class="row"><a class="btn" href="nhatrang/index.html" target="_blank" rel="noopener">Открыть прототип</a></div>
+  </section>
+
+  <section class="band" id="radar">
+    <div><span class="tag">Как Trendsee</span><h2>Радар рилсов</h2></div>
+    <p>Сетка трендов с ростом и аномалиями, поиск по слову и разбор по ссылке, структура ролика по секундам, сценарий с тремя хуками под твою нишу, радар слов и авторов, очередь сохранёнок из твоего бота. Тренды в прототипе придуманные примеры. Для сравнения: Trendsee стоит 3 300 ₽ в месяц, работает с VPN и не делает монтаж.</p>
+    <div class="strip" role="list">
+      <figure role="listitem"><img src="shots/rr-trends.png" alt="Сетка трендов" loading="lazy"><figcaption>Тренды</figcaption></figure>
+      <figure role="listitem"><img src="shots/rr-search.png" alt="Поиск по слову" loading="lazy"><figcaption>Поиск</figcaption></figure>
+      <figure role="listitem"><img src="shots/rr-trend.png" alt="Карточка тренда" loading="lazy"><figcaption>Карточка тренда</figcaption></figure>
+      <figure role="listitem"><img src="shots/rr-adapt.png" alt="Адаптация под нишу" loading="lazy"><figcaption>Адаптация</figcaption></figure>
+      <figure role="listitem"><img src="shots/rr-inbox.png" alt="Очередь сохранёнок" loading="lazy"><figcaption>Сохранёнки</figcaption></figure>
+    </div>
+    <div class="row"><a class="btn" href="reels-radar/index.html" target="_blank" rel="noopener">Открыть прототип</a></div>
+  </section>
+
+  <section class="band" id="plans">
+    <div><span class="tag">Планы</span><h2>Канал без лица и ИИ-персонаж</h2></div>
+    <p>Ниши с оценкой, четыре варианта визуального стиля с шапками для генерации, план по неделям и условия остановки. Для ИИ-персонажа: концепт, образ, рубрики, 30 дней запуска и рамки.</p>
+    <div class="row"><a class="btn" href="plan.html#youtube" target="_blank" rel="noopener">План YouTube</a><a class="btn ghost" href="plan.html#ai-model" target="_blank" rel="noopener">План ИИ-персонажа</a></div>
+  </section>
+
+  <section class="band">
+    <h2>Что показали тесты</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Проверка</th><th>Итог</th><th>Что нашла</th></tr></thead>
+      <tbody>
+        <tr><td>Раскладка, контраст, тап-зоны (3 ширины, 2 темы) и сценарии по кнопкам</td><td class="ok">969 из 969</td><td>серый текст не проходил AA, кнопка-акцент 3.2 из 4.5, метки карты и переключатели были мелкими, «Назад» ломал карточку тренда</td></tr>
+        <tr><td>Стресс: 40 ботов на приложение, 2100-2400 действий</td><td class="ok">0 нарушений</td><td>первый прогон поймал XSS в имени автора и теме идеи, исправлено</td></tr>
+        <tr><td>Запуск внутри Telegram: подставной Telegram.WebApp (76 проверок)</td><td class="ok">76 из 76</td><td>нижняя панель, главная кнопка и шторка садились на полосу жестов iPhone, системный «назад» закрывал приложение вместо возврата на экран, оба случая исправлены</td></tr>
+        <tr><td>Нагрузка на сервер и реальный платёж</td><td class="warn">не проверено</td><td>сервера в прототипах нет</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="callout">
+    <h3>Что остаётся открытым</h3>
+    <p>Цены тарифов (₽590 и ₽1 190, 300 и 600 Stars) это гипотезы для теста. Для сравнения у RentViet 350 ₽ в сутки и 1 500 ₽ в неделю. Курс Stars к рублю я не проверял.</p>
+    <ul>
+      <li>Карта и Bybit работают как внешняя оплата: Telegram по правилам требует Stars для цифровых услуг, риск ограничения показа остаётся.</li>
+      <li>Trendsee разобран без входа: тарифы и функции есть, точный вид карточки тренда только после регистрации.</li>
+      <li>Места и риелторы в макете примеры, реальные данные подставим из твоей базы контактов.</li></ul>
+  </section>
+</main>

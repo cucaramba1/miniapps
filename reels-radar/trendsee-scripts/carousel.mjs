@@ -1,0 +1,33 @@
+import { chromium } from '/Users/cucaramba/Claude Code/miniapps/tests/node_modules/playwright-core/index.mjs';
+import fs from 'fs';
+const dir = '/private/tmp/claude-501/-Users-cucaramba-Claude-Code/3b6d4bbe-9669-4e7a-b31d-12de453aedf1/scratchpad/';
+const b = await chromium.connectOverCDP('http://127.0.0.1:9333');
+const p = b.contexts()[0].pages().slice(-1)[0];
+const tokens = async () => ((await p.innerText('body')).match(/Осталось токенов:?\s*(\d+)/) || [])[1];
+await p.goto('https://app2.trendsee.io/carousels/new', { waitUntil: 'domcontentloaded' });
+await p.waitForTimeout(4000);
+const t0 = await tokens();
+const box = p.getByPlaceholder(/Вставьте текст/);
+await box.click();
+await box.fill('5 красных флагов в анкете парня на сайте знакомств: что я замечаю за 3 секунды. Тон: самоирония, девушка 25 лет, реалити про свидания.');
+// открыть выпадающие списки для фиксации опций
+await p.getByText('Воронка', { exact: true }).first().click().catch(() => {});
+await p.waitForTimeout(800);
+await p.screenshot({ path: dir + 'car_funnel.png' });
+console.log('FUNNEL:', (await p.innerText('body')).replace(/\s+/g, ' ').slice(0, 1500));
+await p.keyboard.press('Escape');
+await p.getByText('Тон и стиль', { exact: true }).first().click().catch(() => {});
+await p.waitForTimeout(800);
+await p.screenshot({ path: dir + 'car_tone.png' });
+console.log('TONE:', (await p.innerText('body')).replace(/\s+/g, ' ').slice(0, 1500));
+await p.keyboard.press('Escape');
+const vp = await p.evaluate(() => ({ width: window.innerWidth, height: window.innerHeight }));
+await p.mouse.click(Math.round(1645 / 2000 * vp.width), Math.round(670 / 1088 * vp.height));
+for (let i = 0; i < 24; i++) { await p.waitForTimeout(5000); }
+await p.screenshot({ path: dir + 'car_res.png' });
+const body = (await p.innerText('body')).replace(/\s+/g, ' ');
+fs.writeFileSync(dir + 'car_res.txt', body);
+console.log('URL', p.url());
+console.log(body.slice(body.indexOf('Осталось токенов'), body.indexOf('Осталось токенов') + 3500));
+console.log('tokens', t0, '->', await tokens());
+await b.close();

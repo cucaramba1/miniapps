@@ -1,0 +1,29 @@
+{
+ "app": "reels-radar",
+ "users": 24,
+ "concurrency": 8,
+ "actionsPerBot": 50,
+ "seed": 1,
+ "totalActions": 1199,
+ "secs": 19.3,
+ "actionsPerSec": 62.1,
+ "latencyMs": {
+  "p50": 24,
+  "p95": 33,
+  "p99": 38,
+  "max": 60
+ },
+ "peakChromeRssMB": 1830,
+ "slowActions": 0,
+ "noTargets": 1,
+ "invariantViolations": 4,
+ "jsErrors": 0,
+ "crashes": 0,
+ "invariantSamples": [
+  "XSS after auth-add",
+  "XSS after ",
+  "XSS after au-remove"
+ ],
+ "errorSamples": [],
+ "crashSamples": []
+}

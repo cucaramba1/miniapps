@@ -1,0 +1,6790 @@
+{
+ "total": 969,
+ "failed": 0,
+ "secs": 132.43,
+ "results": [
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/light not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/light not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/light not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/light not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/light not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/light not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/light not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/light not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/light not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/light not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/light not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/light not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/light not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/light not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @360/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/light not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/light not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/light not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/light not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/light not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/light not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/light not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/light not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/light not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/light not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/light not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/light not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/light not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/light not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @390/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/light not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/light not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/light not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/light not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/light not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/light not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/light not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/light not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/light not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/light not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/light not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/light not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/light not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/light not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @430/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/dark not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/dark not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/dark not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/dark not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/dark not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/dark not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/dark not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/dark not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/dark not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/dark not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/dark not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/dark not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/dark not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/dark not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @360/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/dark not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/dark not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/dark not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/dark not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/dark not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/dark not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/dark not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/dark not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/dark not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/dark not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/dark not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/dark not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/dark not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/dark not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @390/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/dark not empty",
+   "ok": true,
+   "detail": "len=136"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "onboard@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/dark not empty",
+   "ok": true,
+   "detail": "len=698"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "home@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/dark not empty",
+   "ok": true,
+   "detail": "len=358"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "detail@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/dark not empty",
+   "ok": true,
+   "detail": "len=46"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "map@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/dark not empty",
+   "ok": true,
+   "detail": "len=704"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "guide@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/dark not empty",
+   "ok": true,
+   "detail": "len=57"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "favs@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/dark not empty",
+   "ok": true,
+   "detail": "len=168"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "profile@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/dark not empty",
+   "ok": true,
+   "detail": "len=107"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "contract@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/dark not empty",
+   "ok": true,
+   "detail": "len=255"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "safety@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "templ@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/dark not empty",
+   "ok": true,
+   "detail": "len=307"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "paywall@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/dark not empty",
+   "ok": true,
+   "detail": "len=153"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "pay@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/dark not empty",
+   "ok": true,
+   "detail": "len=55"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "wait@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/dark not empty",
+   "ok": true,
+   "detail": "len=63"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "done@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/dark not empty",
+   "ok": true,
+   "detail": "len=90"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "fail@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "sweep",
+   "name": "no JS errors @430/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/light not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/light not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/light not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/light not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/light not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/light not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/light not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/light not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @360/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/light not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/light not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/light not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/light not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/light not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/light not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/light not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/light not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @390/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/light not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/light not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/light not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/light not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/light not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/light not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/light not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/light not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/light not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @430/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/dark not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/dark not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/dark not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/dark not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/dark not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/dark not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/dark not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/dark not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @360/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/dark not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/dark not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/dark not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/dark not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/dark not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/dark not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/dark not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/dark not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @390/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/dark not empty",
+   "ok": true,
+   "detail": "len=499"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trends@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/dark not empty",
+   "ok": true,
+   "detail": "len=485"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "trend@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/dark not empty",
+   "ok": true,
+   "detail": "len=137"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "adapt@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/dark not empty",
+   "ok": true,
+   "detail": "len=36"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "search@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/dark not empty",
+   "ok": true,
+   "detail": "len=203"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "radar@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/dark not empty",
+   "ok": true,
+   "detail": "len=92"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "author@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/dark not empty",
+   "ok": true,
+   "detail": "len=223"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "inbox@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/dark not empty",
+   "ok": true,
+   "detail": "len=492"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "digest@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/dark not empty",
+   "ok": true,
+   "detail": "len=87"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "settings@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "sweep",
+   "name": "no JS errors @430/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/light not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/light not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/light not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/light not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/light not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @360/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/light not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/light not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/light not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/light not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/light not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @390/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/light not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/light not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/light not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/light not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/light one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/light not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/light no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/light tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/light contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @430/light",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/dark not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/dark not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/dark not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/dark not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/dark not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@360/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @360/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/dark not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/dark not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/dark not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/dark not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/dark not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@390/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @390/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/dark not empty",
+   "ok": true,
+   "detail": "len=256"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "board@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/dark not empty",
+   "ok": true,
+   "detail": "len=308"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "video@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/dark not empty",
+   "ok": true,
+   "detail": "len=143"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "ideas@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/dark not empty",
+   "ok": true,
+   "detail": "len=501"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "lib@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/dark one screen visible",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/dark not empty",
+   "ok": true,
+   "detail": "len=147"
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/dark no horizontal overflow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/dark tap targets >=36px",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "stats@430/dark contrast AA",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "sweep",
+   "name": "no JS errors @430/dark",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "starts on onboarding",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "onboarding -> home",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "tabbar visible on home",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "filter sheet opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "tight budget -> empty state",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "reset restores feed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "quick chip \"sea\" narrows",
+   "ok": true,
+   "detail": "n=3"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "favourite shows in favs",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "unfav empties list",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "empty favs CTA -> home",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "card opens without paywall",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "contact is locked by default",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "quota still 3 after viewing",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "free contact unlocked NT-047",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "free contact unlocked NT-028",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "free contact unlocked NT-049",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "quota 3 -> 0 after 3 unlocks",
+   "ok": true,
+   "detail": "0 из 3"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "already unlocked stays open (no charge)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "4th contact -> paywall",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "paywall offers 3 days and week only",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "paywall -> pay",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "Stars is the default method",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "stars amount of 3 days shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "card path labelled external",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "card pay disabled w/o card",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "card input formatted",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "card pay enabled with valid card",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "pay -> wait",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "wait -> done",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "quota hidden after subscribe",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "contact open for subscriber",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "message sheet opens",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "scrim closes sheet",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "niche place opens for subscriber",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "place category filter",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "paid guide opens for subscriber",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "agent contact open for subscriber",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "contract check finds 4 issues",
+   "ok": true,
+   "detail": "n=4"
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "template language switch",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "map pin shows card",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "popular place free for everyone",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "niche place -> paywall for free user",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "first guide free",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "paid guide -> paywall for free user",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "test card ...0002 -> fail screen",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "retry returns to pay",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "bybit QR rendered (441 cells)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "bybit \"paid\" -> wait",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "cancel wait -> pay",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "nhatrang",
+   "suite": "flow",
+   "name": "no JS errors in flow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "trends grid has 6 cards",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "search \"ИИ\" -> 2 cards (hook+niche match)",
+   "ok": true,
+   "detail": "n=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "no results -> empty state",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "reset restores",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "growth filter narrows",
+   "ok": true,
+   "detail": "n=3"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "niche filter -> 1 card",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "open trend",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "save toggles icon",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "main button -> adapt",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "generated script respects niche+format",
+   "ok": true,
+   "detail": "🧵 ТРЕД · ниша «ИИ» · по мотивам «Пустые баночки к"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "empty author rejected",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "author added",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "author removed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "purpose changed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "inbox cleared -> empty state",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "keyword search finds results",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "keyword is in radar after add",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "bad link rejected",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "valid link gives analysis",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "hostile keyword does not execute",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "digest renders",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "flow",
+   "name": "no JS errors in flow",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "board lists 4 videos",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "filter published -> 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "published after pipeline -> 2",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "empty idea rejected",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "idea added",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "idea moved to work",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "new video on board",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "kpi counts add up",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "flow",
+   "name": "no JS errors in flow",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

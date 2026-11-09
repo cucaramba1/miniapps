@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Нячанг Дом</title>
+<link rel="stylesheet" href="/shared/ds.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  #app{overflow-wrap:anywhere}
+  .row>*{min-width:0} .pill{flex:none}
+  .price{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .hero{font-size:84px;text-align:center;padding:18px 0 6px}
+  .stepper{display:flex;gap:6px;margin-bottom:18px} .stepper i{flex:1;height:5px;border-radius:9px;background:var(--line)} .stepper i.on{background:var(--accent)}
+  .plan{border:2px solid transparent;transition:all .18s var(--ease)} .plan.on{border-color:var(--accent);background:var(--lav)} .plan.on *{color:var(--lav-ink)}
+  ul.chk{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  ul.chk li{display:flex;gap:10px;align-items:flex-start;font-size:15px} ul.chk li b{flex:none;width:22px;text-align:center}
+  .contact{min-height:44px}
+  #chk-map{height:240px;border-radius:var(--r-l);overflow:hidden;isolation:isolate;position:relative;background:var(--surface-2)}
+  .dist-label{background:transparent;border:0;box-shadow:none;color:var(--lav-ink);font-weight:700;font-size:12px;text-shadow:0 0 3px var(--bg)}
+  .leaflet-tooltip.dist-label::before{display:none}
+  textarea.input{resize:vertical}
+  .chip.on[data-testid=chk-flag]{background:var(--rose);color:var(--rose-ink)}
+</style></head>
+<body>
+<button class="themebtn" data-testid="theme">🌗 тема</button>
+<div id="phone">
+ <div id="tgbar"><button id="tgback" aria-label="Назад" style="visibility:hidden">‹ Назад</button><span id="tgtitle">Нячанг Дом</span><span>⋯</span></div>
+ <div id="app">
+  <section class="screen" id="s-onboard" data-testid="s-onboard"></section>
+  <section class="screen" id="s-nopen" data-testid="s-nopen">
+    <div class="hero">📲</div><h1 style="text-align:center">Откройте приложение из Telegram</h1>
+    <p class="muted" style="text-align:center;margin-top:10px">Вход работает только внутри Telegram: так мы знаем, кто вы, и можем выдать доступ.</p>
+  </section>
+
+  <section class="screen has-tabs" id="s-check" data-testid="s-check">
+    <h1 style="margin-bottom:10px">Проверить жильё</h1>
+    <input class="input" id="chk-q" type="search" placeholder="Название места или района" data-testid="chk-q" autocomplete="off" style="margin-bottom:8px">
+    <div class="chips" id="chk-kinds"></div>
+    <div class="chips" id="chk-districts"></div>
+    <div id="chk-map" data-testid="chk-map"></div>
+    <div class="row between" style="margin:8px 0"><button class="chip" id="chk-flag" data-testid="chk-flag">🚩 Флажок</button>
+      <button class="chip" data-go="addplace" data-testid="add-place">＋ Добавить место</button></div>
+    <div class="col" id="chk-list" data-testid="chk-list"></div>
+  </section>
+  <section class="screen" id="s-place" data-testid="s-place"></section>
+  <section class="screen" id="s-review" data-testid="s-review"></section>
+  <section class="screen" id="s-addplace" data-testid="s-addplace"></section>
+  <section class="screen has-tabs" id="s-free" data-testid="s-free"></section>
+  <section class="screen has-tabs" id="s-realtors" data-testid="s-realtors"></section>
+  <section class="screen has-tabs" id="s-favs" data-testid="s-favs"></section>
+  <section class="screen has-tabs" id="s-profile" data-testid="s-profile"></section>
+  <section class="screen" id="s-pay" data-testid="s-pay"></section>
+
+  <nav class="tabbar" data-testid="tabbar">
+    <button class="tab" data-go="check" data-testid="tab-check"><span class="ico">🔎</span>Проверить</button>
+    <button class="tab" data-go="free" data-testid="tab-free"><span class="ico">🏠</span>Свободно</button>
+    <button class="tab" data-go="realtors" data-testid="tab-realtors"><span class="ico">🤝</span>Риелторы</button>
+    <button class="tab" data-go="favs" data-testid="tab-favs"><span class="ico">♡</span>Избранное</button>
+    <button class="tab" data-go="profile" data-testid="tab-profile"><span class="ico">🙂</span>Профиль</button>
+  </nav>
+  <button id="mainbtn" data-testid="mainbtn"></button>
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sh-flag" data-testid="sh-flag"></div>
+  <div class="toast" id="toast" role="status"></div>
+ </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/protomaps-leaflet@5.1.0/dist/protomaps-leaflet.js"></script>
+<script src="/shared/tgx.js"></script>
+<script src="/js/dom.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/geo.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/screens_core.js"></script>
+<script src="/js/screens_check.js"></script>
+<script src="/js/screens_review.js"></script>
+<script src="/js/screens_free.js"></script>
+<script src="/js/screens_realtors.js"></script>
+<script src="/js/screens_favs.js"></script>
+<script src="/js/screens_pay.js"></script>
+<script src="/js/screens_profile.js"></script>
+<script>App.start();</script>
+</body></html>

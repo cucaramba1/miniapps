@@ -1,0 +1,7 @@
+[
+ {"name_ru": "Центр (Европейский квартал)", "geometry": {"type": "Point", "coordinates": [109.1960, 12.2450]}},
+ {"name_ru": "Север (Скения, Океанус)", "geometry": {"type": "Point", "coordinates": [109.2015, 12.2812]}},
+ {"name_ru": "Хон Чонг", "geometry": {"type": "Point", "coordinates": [109.2165, 12.2720]}},
+ {"name_ru": "Юг (у Института океанографии)", "geometry": {"type": "Point", "coordinates": [109.2060, 12.2100]}},
+ {"name_ru": "Остров Хон Че (Винперл)", "geometry": {"type": "Point", "coordinates": [109.2440, 12.2240]}}
+]

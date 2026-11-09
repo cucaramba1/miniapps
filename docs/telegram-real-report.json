@@ -1,0 +1,315 @@
+{
+ "at": "2026-11-04T13:33:43.980Z",
+ "total": 44,
+ "fails": 0,
+ "results": [
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "ready() ровно один раз",
+   "ok": true,
+   "detail": "ready=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "expand() ровно один раз",
+   "ok": true,
+   "detail": "expand=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "disableVerticalSwipes() вызван",
+   "ok": true,
+   "detail": "swipes=1"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "тема от colorScheme=dark при светлой системной",
+   "ok": true,
+   "detail": "theme=dark"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "нет рамки-телефона (.frame)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "нет шапки-имитации #tgbar",
+   "ok": true,
+   "detail": "display=none"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "boot",
+   "name": "без ошибок в консоли",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "haptic",
+   "name": "переход экрана вызывает impactOccurred",
+   "ok": true,
+   "detail": "1->2"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "back",
+   "name": "trend: есть способ вернуться",
+   "ok": true,
+   "detail": "data-back=true BackButton.show=true"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "deadend",
+   "name": "trend: не тупик (есть хоть какой-то выход)",
+   "ok": true,
+   "detail": "кнопок-выходов=3 main=true табы=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "deadend",
+   "name": "adapt: не тупик (есть хоть какой-то выход)",
+   "ok": true,
+   "detail": "кнопок-выходов=13 main=false табы=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "back",
+   "name": "author: есть способ вернуться",
+   "ok": true,
+   "detail": "data-back=true BackButton.show=true"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "deadend",
+   "name": "author: не тупик (есть хоть какой-то выход)",
+   "ok": true,
+   "detail": "кнопок-выходов=2 main=false табы=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "deadend",
+   "name": "settings: не тупик (есть хоть какой-то выход)",
+   "ok": true,
+   "detail": "кнопок-выходов=3 main=false табы=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "back",
+   "name": "без ошибок при обходе экранов",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "nativeback",
+   "name": "скрыта на корневом экране",
+   "ok": true,
+   "detail": "visible=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "nativeback",
+   "name": "видна на глубоком экране",
+   "ok": true,
+   "detail": "trend: visible=true"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "nativeback",
+   "name": "onClick зарегистрирован",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "nativeback",
+   "name": "нажатие возвращает на предыдущий экран и скрывает кнопку",
+   "ok": true,
+   "detail": "cur=trends visible=false"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "nativeback",
+   "name": "без ошибок",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "reels-radar",
+   "suite": "safearea",
+   "name": "tabbar (экран trends): поднимается при инсете 34px",
+   "ok": true,
+   "detail": "зазор снизу 12px -> 46px"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "safearea",
+   "name": "mainbtn (экран trend): поднимается при инсете 34px",
+   "ok": true,
+   "detail": "зазор снизу 16px -> 50px"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "clipboard",
+   "name": "отказ буфера даёт сообщение, не падает",
+   "ok": true,
+   "detail": "toast=\"Не удалось скопировать, выделите текст вручную\" errs=0"
+  },
+  {
+   "app": "reels-radar",
+   "suite": "offline",
+   "name": "старт без сети и без Telegram-скрипта",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "ready() ровно один раз",
+   "ok": true,
+   "detail": "ready=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "expand() ровно один раз",
+   "ok": true,
+   "detail": "expand=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "disableVerticalSwipes() вызван",
+   "ok": true,
+   "detail": "swipes=1"
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "тема от colorScheme=dark при светлой системной",
+   "ok": true,
+   "detail": "theme=dark"
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "нет рамки-телефона (.frame)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "нет шапки-имитации #tgbar",
+   "ok": true,
+   "detail": "display=none"
+  },
+  {
+   "app": "faceless",
+   "suite": "boot",
+   "name": "без ошибок в консоли",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "haptic",
+   "name": "переход экрана вызывает impactOccurred",
+   "ok": true,
+   "detail": "1->2"
+  },
+  {
+   "app": "faceless",
+   "suite": "back",
+   "name": "video: есть способ вернуться",
+   "ok": true,
+   "detail": "data-back=true BackButton.show=true"
+  },
+  {
+   "app": "faceless",
+   "suite": "deadend",
+   "name": "video: не тупик (есть хоть какой-то выход)",
+   "ok": true,
+   "detail": "кнопок-выходов=11 main=true табы=false"
+  },
+  {
+   "app": "faceless",
+   "suite": "back",
+   "name": "без ошибок при обходе экранов",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "nativeback",
+   "name": "скрыта на корневом экране",
+   "ok": true,
+   "detail": "visible=false"
+  },
+  {
+   "app": "faceless",
+   "suite": "nativeback",
+   "name": "видна на глубоком экране",
+   "ok": true,
+   "detail": "video: visible=true"
+  },
+  {
+   "app": "faceless",
+   "suite": "nativeback",
+   "name": "onClick зарегистрирован",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "nativeback",
+   "name": "нажатие возвращает на предыдущий экран и скрывает кнопку",
+   "ok": true,
+   "detail": "cur=board visible=false"
+  },
+  {
+   "app": "faceless",
+   "suite": "nativeback",
+   "name": "без ошибок",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "app": "faceless",
+   "suite": "safearea",
+   "name": "tabbar (экран board): поднимается при инсете 34px",
+   "ok": true,
+   "detail": "зазор снизу 12px -> 46px"
+  },
+  {
+   "app": "faceless",
+   "suite": "safearea",
+   "name": "mainbtn (экран video): поднимается при инсете 34px",
+   "ok": true,
+   "detail": "зазор снизу 16px -> 50px"
+  },
+  {
+   "app": "faceless",
+   "suite": "clipboard",
+   "name": "отказ буфера даёт сообщение, не падает",
+   "ok": true,
+   "detail": "toast=\"Не удалось скопировать, выделите текст вручную\" errs=0"
+  },
+  {
+   "app": "faceless",
+   "suite": "offline",
+   "name": "старт без сети и без Telegram-скрипта",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

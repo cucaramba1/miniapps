@@ -1,0 +1,25 @@
+{
+ "app": "nhatrang",
+ "users": 40,
+ "concurrency": 8,
+ "actionsPerBot": 60,
+ "seed": 3,
+ "totalActions": 2400,
+ "secs": 83.7,
+ "actionsPerSec": 28.7,
+ "latencyMs": {
+  "p50": 27,
+  "p95": 64,
+  "p99": 129,
+  "max": 362
+ },
+ "peakChromeRssMB": 2146,
+ "slowActions": 0,
+ "noTargets": 0,
+ "invariantViolations": 0,
+ "jsErrors": 0,
+ "crashes": 0,
+ "invariantSamples": [],
+ "errorSamples": [],
+ "crashSamples": []
+}

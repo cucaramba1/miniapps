@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- THROWAWAY: одноразовый спайк Task 1, не продакшн. Удалить после записи итога в DESIGN.md раздел 9. -->
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Спайк: камера и геопозиция</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>body{font:16px/1.4 -apple-system,system-ui,sans-serif;padding:16px}button,input{font:inherit;min-height:48px;margin:6px 0}pre{background:#eee;padding:10px;white-space:pre-wrap}</style></head><body>
+<h2>1. Камера без галереи</h2>
+<p>Нажмите и запишите: открылась ли сразу камера? Предлагает ли телефон выбор «Галерея / Файлы»?</p>
+<input type="file" accept="image/*" capture="environment" id="f">
+<pre id="o1">ждём</pre>
+<h2>2. Геопозиция Telegram</h2>
+<button id="b1">LocationManager</button><pre id="o2">ждём</pre>
+<h2>3. Геопозиция браузера</h2>
+<button id="b2">navigator.geolocation</button><pre id="o3">ждём</pre>
+<script>
+const tg=window.Telegram&&Telegram.WebApp; if(tg){tg.ready();tg.expand();}
+document.getElementById('f').addEventListener('change',e=>{const f=e.target.files[0];document.getElementById('o1').textContent=f?`файл: ${f.name}, ${f.type}, ${f.size} байт, lastModified=${new Date(f.lastModified).toISOString()}`:'файл не выбран';});
+document.getElementById('b1').onclick=()=>{const o=document.getElementById('o2');const lm=tg&&tg.LocationManager;if(!lm){o.textContent='LocationManager недоступен (версия Telegram?)';return;}
+ const t=performance.now();lm.init(()=>{o.textContent=`init ok, available=${lm.isLocationAvailable}, granted=${lm.isAccessGranted}`;lm.getLocation(l=>{o.textContent+='\n'+(l?`lat=${l.latitude} lon=${l.longitude} acc=${l.horizontal_accuracy} за ${Math.round(performance.now()-t)} мс`:'ОТКАЗ/null (доступ не выдан)');});});};
+document.getElementById('b2').onclick=()=>{const o=document.getElementById('o3');const t=performance.now();navigator.geolocation.getCurrentPosition(p=>o.textContent=`lat=${p.coords.latitude} lon=${p.coords.longitude} acc=${p.coords.accuracy} за ${Math.round(performance.now()-t)} мс`,e=>o.textContent='ошибка: '+e.code+' '+e.message,{enableHighAccuracy:true,timeout:15000});};
+</script></body></html>

@@ -1,0 +1,434 @@
+{
+ "chats": [
+  {
+   "handle": "@NhaTrangactiveweekend",
+   "title": "НЯЧАНГ - Активные выходные",
+   "members": 2370,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Falk_Guurmann_chat",
+   "title": "Guurman Продукты Нячанг",
+   "members": 2784,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@edakakdomanhatrang",
+   "title": "Eda kak doma Нячанг",
+   "members": 1630,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nhatrang_eda",
+   "title": "Нячанг Еда",
+   "members": 818,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@pickleball_nhatrang",
+   "title": "Пиклбол в Нячанге",
+   "members": 2053,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@shkola_morozova",
+   "title": "Пиклбол Школа Морозова",
+   "members": 57,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Nha_Trang_1",
+   "title": "Проще говоря. Нячанг",
+   "members": 25474,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nha_trang_live",
+   "title": "Нячанг LIVE",
+   "members": 7458,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Nha_Trang_kupi_proday",
+   "title": "Нячанг КУПИ-ПРОДАЙ",
+   "members": 16915,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Volleyball_Nyachang",
+   "title": "Волейбол Нячанг",
+   "members": 892,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_obyavleniya",
+   "title": "Нячанг Объявления Чат Барахолка",
+   "members": 8744,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@xuanhoaapartment",
+   "title": "Квартира в аренду в Нячанге",
+   "members": 32,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@kostyan_rent",
+   "title": "Недвижимость | Константин",
+   "members": 63,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@NhatrangServicesss",
+   "title": "Нячанг СЕРВИС",
+   "members": 1950,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@baraholka_niachang",
+   "title": "Нячанг барахолка",
+   "members": 4966,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@baraholka_nachang",
+   "title": "Нячанг | Барахолка",
+   "members": 13536,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@niachang_tusa",
+   "title": "Нячанг туса афиша настолки",
+   "members": 4430,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@NHATRANG_pull",
+   "title": "Бильярд в Нячанге",
+   "members": 148,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang11",
+   "title": "Вьетнам Нячанг Чат",
+   "members": 15361,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@volley_nhatrang",
+   "title": "Волейбол Нячанг Тренировки",
+   "members": 261,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@oceanus_chatik",
+   "title": "ОКЕАНУС ЧАТ СОСЕДЕЙ",
+   "members": 3741,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@podslushano_oceanus",
+   "title": "Подслушано Океанус",
+   "members": 864,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@oceanuschat",
+   "title": "ОКЕАНУС ЧАТ",
+   "members": 261,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@baraholka_nhatrang_okeanus",
+   "title": "Барахолка Океанус Скения",
+   "members": 2448,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@sosedi_okeanus",
+   "title": "СОСЕДИ Океанус",
+   "members": 6756,
+   "rental_candidate": true
+  }
+ ],
+ "channels": [
+  {
+   "handle": "@Nha_Trang_GO",
+   "title": "Нячанг GO походы",
+   "members": 3966,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nocommision_rent",
+   "title": "Аренда Нячанг без комиссии",
+   "members": 1110,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@nha_trang_best_places",
+   "title": "Дешевый Нячанг",
+   "members": 1952,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@MelomaniA_NT",
+   "title": "MelomaniA вечеринки",
+   "members": 973,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@oceanusarenda",
+   "title": "Аренда Oceanus",
+   "members": 355,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@nhatrang_znakomstva",
+   "title": "Нячанг знакомства",
+   "members": 637,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@edavietnam",
+   "title": "Еда Нячанг вкусно и дешево",
+   "members": 4833,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vietchannel_nhatrang",
+   "title": "Вьетнам | ДЗЕН",
+   "members": 1977,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vietved",
+   "title": "Винперл Нячанг путеводитель",
+   "members": 3300,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_arenda",
+   "title": "Нячанг аренда недвижимость",
+   "members": 2229,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@nyachang_ru",
+   "title": "Нячанг афиша квиз йога",
+   "members": 7800,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachangb",
+   "title": "Нячанг Объявления",
+   "members": 2862,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vietnamdom",
+   "title": "Недвижимость Нячанг Вьетнам",
+   "members": 862,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@rentnhatrang",
+   "title": "Нячанг Жилье Аренда",
+   "members": 4583,
+   "rental_candidate": true
+  },
+  {
+   "handle": "@cafe_nhatrang",
+   "title": "НЯЧАНГ/ИНТЕРЕСНЫЕ КАФЕ",
+   "members": 4767,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@foodi_nhatrang",
+   "title": "FOODI Нячанг еда",
+   "members": 3138,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@viet_live",
+   "title": "Нячанг онлайн",
+   "members": 13656,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@eventnhatrang",
+   "title": "НЯЧАНГ Развлечения EVENTS",
+   "members": 2777,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@daovibe",
+   "title": "Дом Культуры в Нячанге",
+   "members": 1987,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@doit_hard",
+   "title": "DO IT HARD вечеринки",
+   "members": 590,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vietnam_vsem",
+   "title": "Вьетнам Нячанг",
+   "members": 6116,
+   "rental_candidate": false
+  }
+ ],
+ "favorites_not_joined": [
+  {
+   "handle": "@chat_nyachang2",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@chatt_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_chat",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Nyachang_Vietnam",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@danang_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vietnam_med",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@viet_medicine",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Rabota_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@vetnam_rabotaa",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nhatrang_work",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nash_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@NyachangRabota",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@niachang_work",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nhatrang_rabota",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nhatrangwork",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Baraholka_Vietnam",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@barakholka_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_barakholka",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@T2TNhaTrangChat",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Barakholka_NhaTrang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang1",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@Arendaa_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_arendaa",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@nyachang_uslugi",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  },
+  {
+   "handle": "@eda_nyachang",
+   "title": "",
+   "members": null,
+   "rental_candidate": false
+  }
+ ]
+}

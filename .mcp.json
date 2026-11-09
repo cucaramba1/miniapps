@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "playwright-trendsee": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--config",
+        "/Users/cucaramba/.claude/playwright-trendsee-config.json"
+      ],
+      "env": {}
+    }
+  }
+}

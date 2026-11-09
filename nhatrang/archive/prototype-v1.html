@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Нячанг Дом</title>
+<link rel="stylesheet" href="../shared/ds.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  .photo{height:150px;display:grid;place-items:center;font-size:54px;position:relative}
+  .photo .fav{position:absolute;right:10px;top:10px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.85);display:grid;place-items:center;font-size:18px;color:#B8405F}
+  .score{position:absolute;left:10px;top:10px}
+  .price{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .gal{height:230px;border-radius:var(--r-l);display:grid;place-items:center;font-size:80px;position:relative}
+  .dots{position:absolute;bottom:10px;display:flex;gap:6px;left:50%;transform:translateX(-50%)}
+  .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.6)} .dots i.on{background:#fff;width:18px;border-radius:9px}
+  ul.chk{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  ul.chk li{display:flex;gap:10px;align-items:flex-start;font-size:15px} ul.chk li b{flex:none;width:22px;text-align:center}
+  .meter{height:8px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+  .meter i{display:block;height:100%;background:var(--ok);border-radius:9px;transition:width .3s var(--ease)}
+  .map{height:100%;border-radius:var(--r-l);background:radial-gradient(circle at 70% 30%,var(--sky) 0 22%,transparent 23%),linear-gradient(135deg,var(--mint),var(--butter));position:relative;overflow:hidden}
+  .map .sea{position:absolute;right:-10%;top:0;bottom:0;width:38%;background:var(--sky);opacity:.9;transform:skewX(-8deg)}
+  .pin{position:absolute;transform:translate(-50%,-100%);background:var(--surface);min-height:38px;min-width:46px;display:grid;place-items:center;padding:0 12px;border-radius:99px;font-size:12px;font-weight:700;box-shadow:var(--shadow);transition:transform .15s}
+  .pin.on{background:var(--accent);color:var(--accent-ink);transform:translate(-50%,-100%) scale(1.12)}
+  .qr{width:200px;height:200px;margin:0 auto;display:grid;grid-template-columns:repeat(21,1fr);gap:0;background:#fff;padding:10px;border-radius:18px}
+  .qr i{background:#fff} .qr i.k{background:#2A2831}
+  .plan{border:2px solid transparent;transition:all .18s var(--ease)} .plan.on{border-color:var(--accent);background:var(--lav)}
+  .plan.on *{color:var(--lav-ink)}
+  .stepper{display:flex;gap:6px} .stepper i{flex:1;height:5px;border-radius:9px;background:var(--line)} .stepper i.on{background:var(--accent)}
+  .hero{font-size:84px;text-align:center;padding:18px 0 6px}
+  .spin{width:56px;height:56px;border-radius:50%;border:5px solid var(--lav);border-top-color:var(--accent);animation:sp 1s linear infinite;margin:0 auto}
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .lock{position:relative;overflow:hidden}
+  .lock .blur{filter:blur(6px);user-select:none;pointer-events:none}
+  .lock .ov{position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+  .av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-size:22px;flex:none}
+  #gseg button{font-size:13px;padding:0 2px;min-height:44px}
+  .contact{display:flex;align-items:center;gap:10px;min-height:44px;padding:0 4px}
+</style></head>
+<body>
+<button class="themebtn" data-testid="theme">🌗 тема</button>
+<div id="phone">
+ <div id="tgbar"><button id="tgback" aria-label="Назад" style="visibility:hidden">‹ Назад</button><span id="tgtitle">Нячанг Дом</span><span>⋯</span></div>
+ <div id="app">
+
+  <section class="screen" id="s-onboard" data-testid="s-onboard">
+    <div class="stepper" id="ob-steps"><i class="on"></i><i></i><i></i></div>
+    <div id="ob-body"></div>
+  </section>
+
+  <!-- HOME -->
+  <section class="screen has-tabs" id="s-home" data-testid="s-home">
+    <div class="row between" style="margin-bottom:6px">
+      <div><div class="muted sm">Нячанг · свежее за сегодня</div><h1>Нашлось <span id="cnt">0</span></h1></div>
+      <button class="chip" data-sheet="sh-filter" data-testid="open-filter">⚙︎ Фильтры</button>
+    </div>
+    <div class="card" id="quota" style="margin:10px 0 12px;padding:12px 14px" data-testid="quota">
+      <div class="row between sm"><span>Бесплатные контакты хозяев</span><b id="quota-n">3 из 3</b></div>
+      <div class="meter" style="margin-top:8px"><i id="quota-bar" style="width:100%"></i></div>
+    </div>
+    <div class="chips" id="qchips"></div>
+    <div class="col" id="feed" data-testid="feed"></div>
+  </section>
+
+  <!-- DETAIL -->
+  <section class="screen" id="s-detail" data-testid="s-detail"></section>
+
+  <!-- MAP -->
+  <section class="screen has-tabs" id="s-map" data-testid="s-map">
+    <h1 style="margin-bottom:12px">Карта жилья</h1>
+    <div style="height:56%"><div class="map" id="mapbox"><div class="sea"></div></div></div>
+    <div id="mapcard" style="margin-top:12px"></div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="screen has-tabs" id="s-guide" data-testid="s-guide">
+    <h1 style="margin-bottom:12px">Гид по Нячангу</h1>
+    <div class="seg" id="gseg" style="margin-bottom:14px">
+      <button class="on" data-act="gtab" data-k="places" data-testid="g-places">Места</button>
+      <button data-act="gtab" data-k="adapt" data-testid="g-adapt">Адаптация</button>
+      <button data-act="gtab" data-k="agents" data-testid="g-agents">Риелторы</button>
+      <button data-act="gtab" data-k="tools" data-testid="g-tools">Инструменты</button>
+    </div>
+    <div id="gbody"></div>
+  </section>
+
+  <!-- FAVS -->
+  <section class="screen has-tabs" id="s-favs" data-testid="s-favs">
+    <h1 style="margin-bottom:12px">Избранное</h1>
+    <div class="col" id="favlist"></div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="screen has-tabs" id="s-profile" data-testid="s-profile">
+    <h1 style="margin-bottom:12px">Профиль</h1>
+    <div class="card col">
+      <div class="row between"><div><h3 id="plan-name">Бесплатный</h3><div class="muted sm" id="plan-sub">3 контакта хозяев, популярные места</div></div><span class="pill p-lav" id="plan-pill">Free</span></div>
+      <button class="btn block" data-go="paywall" data-testid="to-paywall">Открыть всё</button>
+    </div>
+    <div class="card col" style="margin-top:12px">
+      <h3>Мой поиск</h3>
+      <div class="row between sm"><span class="muted">Бюджет</span><b id="pf-b">до 24 млн ₫</b></div>
+      <div class="row between sm"><span class="muted">Спальни</span><b id="pf-r">3+</b></div>
+      <div class="row between sm"><span class="muted">Срок</span><b id="pf-t">любой</b></div>
+      <button class="btn ghost" data-sheet="sh-filter">Изменить</button>
+    </div>
+    <div class="card col" style="margin-top:12px">
+      <div class="row between"><div><h3>Уведомления о новых</h3><div class="muted sm">Раз в день утром</div></div><button class="switch on" id="sw-notif" data-act="switch" data-testid="sw-notif" aria-label="Уведомления"></button></div>
+    </div>
+  </section>
+
+  <!-- CONTRACT / SAFETY / TEMPL -->
+  <section class="screen" id="s-contract" data-testid="s-contract">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Проверка договора</h2></div>
+    <div class="card col">
+      <div class="muted sm">Вставьте текст договора. Это подсказка, а не юридическая консультация.</div>
+      <textarea class="input" id="ctext" rows="6" style="padding:12px" placeholder="Вставьте текст договора…" data-testid="contract-input"></textarea>
+      <div class="row"><button class="btn ghost grow" data-act="sample" data-testid="contract-sample">Пример</button><button class="btn grow" data-act="check" data-testid="contract-check">Проверить</button></div>
+    </div>
+    <div id="cres" class="col" style="margin-top:12px"></div>
+  </section>
+  <section class="screen" id="s-safety" data-testid="s-safety">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Безопасность сделки</h2></div>
+    <div class="card"><ul class="chk">
+      <li><b>🚩</b>Просят предоплату до просмотра</li><li><b>🚩</b>Цена вдвое ниже рынка</li>
+      <li><b>🚩</b>Нет живого видео-показа квартиры</li><li><b>✅</b>Депозит не больше 1–2 месяцев</li>
+      <li><b>✅</b>Компенсация при досрочном выселении прописана в договоре</li><li><b>✅</b>Проверить Wi-Fi, воду и давление на просмотре</li></ul></div>
+  </section>
+  <section class="screen" id="s-templ" data-testid="s-templ">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Шаблоны сообщений</h2></div>
+    <div class="seg" id="langseg" style="margin-bottom:12px"><button class="on" data-act="lang" data-l="ru">RU</button><button data-act="lang" data-l="en">EN</button><button data-act="lang" data-l="vi">VI</button></div>
+    <div class="card col"><p id="tpl-text" data-testid="tpl-text"></p><button class="btn" data-act="copy" data-testid="tpl-copy">Скопировать</button></div>
+  </section>
+
+  <!-- PAYWALL -->
+  <section class="screen" id="s-paywall" data-testid="s-paywall">
+    <div class="top"><button class="back" data-back aria-label="Закрыть">✕</button></div>
+    <div class="hero">🔑</div>
+    <h1 style="text-align:center" id="pw-title">Откройте контакты и гид</h1>
+    <p class="muted" style="text-align:center;margin:8px 0 18px">Доступ на столько дней, сколько нужно для поиска</p>
+    <div class="col" id="plans"></div>
+    <ul class="chk" style="margin-top:18px"><li><b>✓</b>Контакты хозяев и риелторов без лимита</li><li><b>✓</b>Нишевые места: еда, обмен, кафе для работы</li><li><b>✓</b>Все гайды по адаптации и проверка договора</li></ul>
+  </section>
+
+  <!-- PAY -->
+  <section class="screen" id="s-pay" data-testid="s-pay">
+    <div class="top"><button class="back" data-back aria-label="Назад">‹</button><h2>Способ оплаты</h2></div>
+    <div class="card" style="margin-bottom:12px"><div class="row between"><span id="pay-plan">…</span><b id="pay-sum">…</b></div></div>
+    <div class="seg" id="paym" style="margin-bottom:14px"><button class="on" data-act="paym" data-m="stars" data-testid="m-stars">⭐ Stars</button><button data-act="paym" data-m="card" data-testid="m-card">💳 Карта</button><button data-act="paym" data-m="bybit" data-testid="m-bybit">QR Bybit</button></div>
+    <div id="pay-stars" class="col">
+      <div class="card col" style="text-align:center"><div style="font-size:44px">⭐</div><b id="stars-n">…</b><div class="muted sm">Оплата внутри Telegram, счёт откроется поверх приложения. Возврат через /paysupport.</div></div>
+    </div>
+    <div id="pay-card" class="col" style="display:none">
+      <div class="pill p-peach" style="align-self:flex-start">Откроется во внешнем браузере</div>
+      <input class="input" id="cc-n" inputmode="numeric" placeholder="Номер карты" maxlength="19" data-testid="cc-n" autocomplete="off">
+      <div class="row"><input class="input" id="cc-d" inputmode="numeric" placeholder="ММ/ГГ" maxlength="5" data-testid="cc-d"><input class="input" id="cc-c" inputmode="numeric" placeholder="CVC" maxlength="3" data-testid="cc-c"></div>
+      <div class="muted xs">В боевой версии это страница платёжного провайдера, данные карты мы не видим.</div>
+    </div>
+    <div id="pay-bybit" class="col" style="display:none;text-align:center">
+      <div class="pill p-peach" style="align-self:center">Откроется во внешнем браузере</div>
+      <div class="qr" id="qr" data-testid="qr"></div>
+      <div class="muted sm">Откройте Bybit, нажмите «Сканировать» и подтвердите перевод. Сумма и комментарий уже в QR.</div>
+      <div class="row" style="justify-content:center"><span class="pill p-peach">Ждём перевод: <span id="qr-t">15:00</span></span></div>
+    </div>
+  </section>
+  <section class="screen" id="s-wait" data-testid="s-wait">
+    <div style="padding-top:90px;text-align:center" class="col"><div class="spin"></div><h2>Проверяем платёж</h2><p class="muted">Обычно это занимает до минуты</p>
+    <button class="btn ghost" data-go="pay" data-act="cancelwait" data-testid="wait-cancel">Отмена</button></div>
+  </section>
+  <section class="screen" id="s-done" data-testid="s-done">
+    <div class="hero">🎉</div><h1 style="text-align:center">Готово, всё открыто</h1>
+    <p class="muted" style="text-align:center;margin:8px 0 18px" id="done-sub"></p>
+    <button class="btn block" data-go="home" data-testid="done-home">К объявлениям</button>
+  </section>
+  <section class="screen" id="s-fail" data-testid="s-fail">
+    <div class="hero">🫧</div><h1 style="text-align:center">Платёж не прошёл</h1>
+    <p class="muted" style="text-align:center;margin:8px 0 18px">Деньги не списаны. Попробуйте другой способ.</p>
+    <div class="col"><button class="btn block" data-go="pay" data-testid="fail-retry">Попробовать снова</button><button class="btn ghost block" data-go="home" data-testid="fail-home">Позже</button></div>
+  </section>
+
+  <nav class="tabbar" data-testid="tabbar">
+    <button class="tab" data-go="home" data-testid="tab-home"><span class="ico">🏠</span>Лента</button>
+    <button class="tab" data-go="map" data-testid="tab-map"><span class="ico">🗺️</span>Карта</button>
+    <button class="tab" data-go="guide" data-testid="tab-guide"><span class="ico">🧭</span>Гид</button>
+    <button class="tab" data-go="favs" data-testid="tab-favs"><span class="ico">♡</span>Избранное</button>
+    <button class="tab" data-go="profile" data-testid="tab-profile"><span class="ico">🙂</span>Профиль</button>
+  </nav>
+  <button id="mainbtn" data-testid="mainbtn"></button>
+
+  <div class="scrim" id="scrim"></div>
+  <div class="sheet" id="sh-filter" data-testid="sh-filter"><div class="grab"></div>
+    <h2 style="margin-bottom:12px">Фильтры</h2>
+    <div class="col">
+      <div><div class="row between"><b>Бюджет до</b><span id="f-bv">24 млн ₫</span></div><input type="range" id="f-b" min="8" max="40" value="24" data-testid="f-budget"></div>
+      <div><b>Спальни</b><div class="chips" id="f-rooms"></div></div>
+      <div><b>Срок</b><div class="chips" id="f-term"></div></div>
+      <div><b>Важно</b><div class="chips" id="f-must"></div></div>
+      <div class="row"><button class="btn ghost grow" data-act="freset" data-testid="f-reset">Сбросить</button><button class="btn grow" data-act="fapply" data-testid="f-apply">Показать <span id="f-n"></span></button></div>
+    </div>
+  </div>
+  <div class="sheet" id="sh-msg" data-testid="sh-msg"><div class="grab"></div>
+    <h2 style="margin-bottom:6px">Написать хозяину</h2><p class="muted sm" style="margin-bottom:12px">Сообщение подготовлено, отправите вы сами.</p>
+    <div class="seg" id="mseg" style="margin-bottom:12px"><button class="on" data-act="mlang" data-l="vi">Вьетнамский</button><button data-act="mlang" data-l="en">English</button></div>
+    <div class="card" id="msg-text" style="margin-bottom:12px"></div>
+    <div class="row"><button class="btn ghost grow" data-act="mcopy" data-testid="msg-copy">Скопировать</button><button class="btn grow" data-act="msrc" data-testid="msg-open">Открыть источник</button></div>
+  </div>
+  <div class="sheet" id="sh-guide" data-testid="sh-guide"><div class="grab"></div>
+    <h2 id="gd-title" style="margin-bottom:8px"></h2><div id="gd-body" class="col"></div></div>
+  <div class="toast" id="toast" role="status"></div>
+ </div>
+</div>
+
+<script src="../shared/tgx.js"></script>
+<script>
+const {$,$$,go,toast,setMain,sheet,register,acts,esc}=tgx;
+const T=[ // real candidates from nhatrang-search/listings.json (agents stripped)
+ {id:'NT-047',s:8.5,t:'Oceanus OC1A, 3 спальни, вид на море',p:19,b:3,a:71,d:'Север · Oceanus',term:'от 3 мес',dep:'1 мес',src:'Facebook',e:'🌊',c:'sky',m:['3 спальни','От 3 месяцев','Депозит 1 месяц','Дешевле бюджета'],u:['Свободна ли с даты заезда','Спальни маленькие (71 м²)'],x:63,y:30},
+ {id:'NT-028',s:8.0,t:'Oceanus, прямой вид на море, с животными',p:20,b:3,a:null,d:'Север · Phạm Văn Đồng',term:'не указан',dep:'не указан',src:'Telegram',e:'🌅',c:'peach',m:['3 спальни','В идеальном диапазоне','Полностью меблирована','2 минуты до моря'],u:['Срок не указан','Депозит не указан'],x:58,y:22},
+ {id:'NT-049',s:7.0,t:'Oceanus OC2B, у самого пляжа',p:23,b:3,a:null,d:'Север · Viễn Triều',term:'проверить',dep:'не указан',src:'Marketplace',e:'🏖️',c:'butter',m:['3 спальни','У пляжа','В бюджете'],u:['Срок','Площадь','Дата'],x:68,y:40},
+ {id:'NT-077',s:6.0,t:'Пентхаус на Tran Quy Cap, 2 санузла',p:14,b:3,a:70,d:'Центр · Tran Quy Cap',term:'3–6 мес',dep:'1 мес',src:'Facebook',e:'🏙️',c:'lav',m:['3 изолированные спальни','2 санузла','Рядом с центром','Сильно ниже бюджета'],u:['Фото не проверены','Срок до 6 мес, уточнить'],x:42,y:55},
+ {id:'NT-071',s:5.5,t:'HUD Phước Long, 88 м², мебель',p:20,b:3,a:88,d:'Юг · Phước Long',term:'часто 12 мес',dep:'2 мес',src:'Marketplace',e:'🏢',c:'mint',m:['3 спальни','88 м²','Полная мебель'],u:['Контракты часто на 12 мес'],bad:['Депозит 2 месяца'],x:30,y:78},
+ {id:'NT-076',s:5.5,t:'Maple View, 3 спальни с балконом',p:21,b:3,a:90,d:'ЖК Maple View',term:'2 мес',dep:'1 мес',src:'Facebook',e:'🌿',c:'rose',m:['Балкон у каждой спальни','Контракт 2 мес','Депозит 1 мес'],u:['Район не указан','Фото не проверены'],x:48,y:68},
+];
+/* Demo places: generic examples, real addresses come from the owner's own base. free = popular, !free = niche (paid). */
+const PL=[
+ {id:'p1',k:'sights',n:'Башни По Нагар',d:'Древний храмовый комплекс на холме',free:true,e:'🏛️',x:40,y:20},
+ {id:'p2',k:'food',n:'Уличная еда у рынка (пример)',d:'Бан ми и лапша, до 50 тыс. ₫',free:true,e:'🍜',x:35,y:50},
+ {id:'p3',k:'cafe',n:'Кофейня на набережной (пример)',d:'Популярное место с видом',free:true,e:'☕',x:62,y:60},
+ {id:'p4',k:'bank',n:'Отделение банка в центре (пример)',d:'Банкоматы и обмен, будни',free:true,e:'🏦',x:48,y:35},
+ {id:'p5',k:'cheap',n:'Дешёвая столовая для местных (пример)',d:'Обед в 2 раза дешевле туристических',free:false,e:'🥢',x:28,y:70},
+ {id:'p6',k:'exch',n:'Обменник с лучшим курсом (пример)',d:'Сравнение курсов по району',free:false,e:'💱',x:55,y:80},
+ {id:'p7',k:'cafe',n:'Кафе для работы с ноутбуком (пример)',d:'Розетки, тишина, быстрый Wi-Fi',free:false,e:'💻',x:72,y:42},
+ {id:'p8',k:'sights',n:'Смотровая без туристов (пример)',d:'Закат без толпы',free:false,e:'🌇',x:20,y:30},
+];
+const PK=[['all','Все'],['food','Еда'],['cheap','Дёшево'],['cafe','Кафе'],['sights','Что посмотреть'],['bank','Банки'],['exch','Обмен']];
+const GD=[
+ {id:'g1',n:'SIM и интернет',free:true,e:'📶',b:['Купите SIM в аэропорту или eSIM заранее.','Проверьте покрытие в вашем районе до оплаты на месяц.','Для работы возьмите запасной тариф.']},
+ {id:'g2',n:'Деньги и банкоматы',free:false,e:'💳',b:['Лимиты банкоматов и комиссии отличаются, сравните до снятия.','Обмен по QR удобнее наличных, но проверяйте курс.','Не меняйте с рук на улице.']},
+ {id:'g3',n:'Транспорт и байк',free:false,e:'🛵',b:['Для байка нужны права и страховка.','Такси через приложение дешевле уличного.','Проверьте шлем и тормоза при аренде.']},
+ {id:'g4',n:'Виза и продление',free:false,e:'🛂',b:['Сроки и правила меняются, сверяйтесь с официальным источником.','Визаран и продление делают через агентства, берите отзывы.']},
+ {id:'g5',n:'Медицина и страховка',free:false,e:'🩺',b:['Оформите страховку до выезда.','Сохраните номера клиник с русско- и англоговорящим персоналом.']},
+];
+const AG=[ // demo realtors, contacts are placeholders (own base lands here)
+ {id:'r1',n:'Агент A (пример)',l:'RU · VI',sp:'Север, ЖК у моря',e:'🧑‍💼',c:'mint'},
+ {id:'r2',n:'Агент B (пример)',l:'VI · EN',sp:'Центр, студии',e:'👩‍💼',c:'lav'},
+ {id:'r3',n:'Агент C (пример)',l:'RU · EN',sp:'Дома и виллы',e:'🧑‍💼',c:'peach'},
+];
+const PLANS={d3:{n:'3 дня',sum:'₽590',stars:300,sub:'Быстрый поиск, цена пробная',days:3},w1:{n:'Неделя',sum:'₽1 190',stars:600,sub:'Лучший выбор для переезда',days:7,hit:true}};
+const S={fav:new Set(),viewed:new Set(),freeC:3,maxC:3,unlocked:new Set(),sub:null,f:{b:24,r:3,term:'any',must:new Set()},plan:'w1',method:'stars',lang:'ru',msgLang:'vi',cur:null,ob:0,gtab:'places',pk:'all'};
+const bg=c=>`background:var(--${c})`;
+const money=n=>n+' млн ₫';
+const hasPro=()=>!!S.sub;
+const filtered=()=>T.filter(x=>x.p<=S.f.b && x.b>=S.f.r && (S.f.term==='any'||(S.f.term==='short'&&!/12|не указан|проверить/.test(x.term))) && [...S.f.must].every(k=>k==='sea'?/мор|пляж/i.test(x.t+x.m.join()):k==='furn'?/мебел/i.test(x.m.join()):true));
+
+function card(x){
+  const sc=x.s>=7?'p-mint':x.s>=6?'p-butter':'p-peach';
+  return `<article class="card tap pad0" data-act="open" data-id="${x.id}" data-testid="card-${x.id}">
+  <div class="photo" style="${bg(x.c)}">${x.e}<span class="pill ${sc} score">★ ${x.s}</span>
+   <button class="fav" data-act="fav" data-id="${x.id}" aria-label="В избранное" data-testid="fav-${x.id}">${S.fav.has(x.id)?'♥':'♡'}</button></div>
+  <div style="padding:14px 16px 16px" class="col"><div class="row between"><span class="price">${money(x.p)}</span><span class="muted sm">${x.a?x.a+' м²':'м² ?'} · ${x.b} сп.</span></div>
+  <h3 style="line-height:1.25">${x.t}</h3><div class="row wrap" style="gap:6px"><span class="pill p-lav">${x.d}</span><span class="pill p-sky">${x.term}</span>${S.unlocked.has(x.id)?'<span class="pill p-mint">контакт открыт</span>':''}</div></div></article>`;
+}
+function renderFeed(){
+  const l=filtered(); $('#cnt').textContent=l.length;
+  $('#feed').innerHTML=l.length?l.map(card).join(''):`<div class="empty"><div class="big">🫥</div><h3>Ничего не нашли</h3><p>Расширьте бюджет или уберите фильтры</p><button class="btn" style="margin-top:12px" data-act="freset" data-testid="empty-reset">Сбросить фильтры</button></div>`;
+  $('#quota-n').textContent=hasPro()?'без лимита':`${S.freeC} из ${S.maxC}`; $('#quota-bar').style.width=hasPro()?'100%':(S.freeC/S.maxC*100)+'%';
+  $('#quota').style.display=hasPro()?'none':'';
+  $('#f-n').textContent='('+l.length+')';
+}
+function renderQ(){
+  const q=[['all','Все'],['sea','🌊 Вид на море'],['furn','🛋️ С мебелью'],['short','⏱ Короткий срок']];
+  $('#qchips').innerHTML=q.map(([k,n])=>`<button class="chip ${(k==='all'&&!S.f.must.size&&S.f.term==='any')||S.f.must.has(k)||(k==='short'&&S.f.term==='short')?'on':''}" data-act="qchip" data-k="${k}" data-testid="q-${k}">${n}</button>`).join('');
+}
+function contactBox(x){
+  const open=hasPro()||S.unlocked.has(x.id);
+  if(open) return `<div class="card col" id="contact-box" data-testid="contact-open"><h3>Контакт хозяина</h3>
+    <div class="contact"><span style="font-size:22px">✈️</span><b>@owner_demo</b><span class="muted sm">Telegram</span></div>
+    <div class="contact"><span style="font-size:22px">💬</span><b>+84 000 000 000</b><span class="muted sm">Zalo, WhatsApp</span></div>
+    <div class="contact"><span style="font-size:22px">🔗</span><b>${esc(x.src)}</b><span class="muted sm">оригинал объявления</span></div></div>`;
+  return `<div class="card col lock" id="contact-box" data-testid="contact-locked"><h3>Контакт хозяина</h3>
+    <div class="blur"><div class="contact">✈️ <b>@owner_xxxx</b></div><div class="contact">💬 <b>+84 000 000 000</b></div></div>
+    <div class="muted sm">${S.freeC>0?`Бесплатных контактов осталось: ${S.freeC}`:'Бесплатные контакты закончились'}</div></div>`;
+}
+function detail(id){
+  const x=T.find(i=>i.id===id); S.cur=x;
+  $('#s-detail').innerHTML=`<div class="top"><button class="back" data-back aria-label="Назад">‹</button><span class="grow"></span><button class="back" data-act="fav" data-id="${x.id}" aria-label="В избранное" data-testid="d-fav">${S.fav.has(x.id)?'♥':'♡'}</button></div>
+  <div class="gal" style="${bg(x.c)}">${x.e}<div class="dots"><i class="on"></i><i></i><i></i></div></div>
+  <div class="row between" style="margin:14px 0 4px"><span class="price">${money(x.p)}<span class="muted sm"> / мес</span></span><span class="pill p-mint">★ ${x.s}</span></div>
+  <h1 style="font-size:21px">${x.t}</h1><div class="muted sm" style="margin:4px 0 14px">${x.d} · ${x.src}</div>
+  <div class="row" style="gap:8px;margin-bottom:14px"><div class="card grow" style="padding:12px"><div class="muted xs">Спален</div><b>${x.b}</b></div><div class="card grow" style="padding:12px"><div class="muted xs">Площадь</div><b>${x.a?x.a+' м²':'?'}</b></div><div class="card grow" style="padding:12px"><div class="muted xs">Депозит</div><b>${x.dep}</b></div></div>
+  <div class="card col"><h3>Подходит</h3><ul class="chk">${x.m.map(i=>`<li><b>✅</b>${i}</li>`).join('')}</ul></div>
+  <div class="card col" style="margin:12px 0"><h3>Уточнить у хозяина</h3><ul class="chk">${x.u.map(i=>`<li><b>❓</b>${i}</li>`).join('')}${(x.bad||[]).map(i=>`<li><b>⚠️</b>${i}</li>`).join('')}</ul></div>
+  ${contactBox(x)}`;
+  const open=hasPro()||S.unlocked.has(x.id);
+  setMain(open?'Написать хозяину':'Открыть контакт',()=>open?(renderMsg(),sheet('sh-msg',true)):acts.unlock());
+}
+function gPlaces(){
+  const l=PL.filter(p=>S.pk==='all'||p.k===S.pk);
+  return `<div class="chips">${PK.map(([k,n])=>`<button class="chip ${S.pk===k?'on':''}" data-act="pk" data-k="${k}" data-testid="pk-${k}">${n}</button>`).join('')}</div>
+  <div style="height:190px;margin-bottom:12px"><div class="map">${'<div class="sea"></div>'}${l.map(p=>`<button class="pin" style="left:${p.x}%;top:${p.y}%" data-act="place" data-id="${p.id}" data-testid="plpin-${p.id}">${p.e}${!p.free&&!hasPro()?'🔒':''}</button>`).join('')}</div></div>
+  <div class="col">${l.map(p=>{const lk=!p.free&&!hasPro();return `<button class="card tap row ${lk?'lock':''}" data-act="place" data-id="${p.id}" data-testid="pl-${p.id}" style="text-align:left"><span class="av" style="${bg(p.free?'mint':'lav')}">${p.e}</span><div class="grow ${lk?'blur':''}"><h3>${esc(p.n)}</h3><div class="muted sm">${esc(p.d)}</div></div>${p.free?'<span class="pill p-mint">Популярное</span>':lk?'<span class="pill p-lav">🔒 Ниша</span>':'<span class="pill p-lav">Ниша</span>'}</button>`}).join('')}</div>`;
+}
+function gAdapt(){
+  return `<div class="col">${GD.map(g=>{const lk=!g.free&&!hasPro();return `<button class="card tap row" data-act="guide" data-id="${g.id}" data-testid="gd-${g.id}" style="text-align:left"><span class="av" style="${bg(g.free?'mint':'lav')}">${g.e}</span><div class="grow"><h3>${g.n}</h3><div class="muted sm">${g.free?'Бесплатно':lk?'Для подписчиков':'Открыто'}</div></div>${lk?'🔒':'›'}</button>`}).join('')}</div>`;
+}
+function gAgents(){
+  return `<p class="muted sm" style="margin-bottom:12px">Проверенные риелторы с русским, вьетнамским и английским. Контакт открывается так же, как контакт хозяина.</p><div class="col">${AG.map(a=>{const open=hasPro()||S.unlocked.has(a.id);return `<div class="card col"><div class="row"><span class="av" style="${bg(a.c)}">${a.e}</span><div class="grow"><h3>${esc(a.n)}</h3><div class="muted sm">${a.l} · ${a.sp}</div></div></div>${open?`<div class="contact" data-testid="ag-open-${a.id}">✈️ <b>@agent_demo</b></div>`:`<button class="btn soft" data-act="unlockag" data-id="${a.id}" data-testid="ag-${a.id}">Открыть контакт</button>`}</div>`}).join('')}</div>`;
+}
+function gTools(){
+  return `<div class="col">
+  <button class="card tap row" data-go="contract" data-testid="go-contract" style="text-align:left"><span style="font-size:30px">📄</span><div class="grow"><h3>Проверить договор</h3><div class="muted sm">Найдёт подводные камни до подписи</div></div>›</button>
+  <button class="card tap row" data-go="safety" data-testid="go-safety" style="text-align:left"><span style="font-size:30px">🛡️</span><div class="grow"><h3>Безопасность сделки</h3><div class="muted sm">Красные флаги и что проверить</div></div>›</button>
+  <button class="card tap row" data-go="templ" data-testid="go-templ" style="text-align:left"><span style="font-size:30px">💬</span><div class="grow"><h3>Шаблоны сообщений</h3><div class="muted sm">Русский, английский, вьетнамский</div></div>›</button></div>`;
+}
+function renderGuide(){
+  $$('#gseg button').forEach(b=>b.classList.toggle('on',b.dataset.k===S.gtab));
+  $('#gbody').innerHTML={places:gPlaces,adapt:gAdapt,agents:gAgents,tools:gTools}[S.gtab]();
+}
+register({
+ onboard:{title:'Нячанг Дом',hideTabs:true,enter(){ob();}},
+ home:{title:'Нячанг Дом',tab:'home',enter(){renderQ();renderFeed();setMain(null);}},
+ detail:{title:'Объявление',parentTab:'home',hideTabs:true,enter(el,p){ S.viewed.add(p.id); detail(p.id); }},
+ map:{title:'Карта',tab:'map',enter(){drawMap();}},
+ guide:{title:'Гид',tab:'guide',enter(){renderGuide();setMain(null);}},
+ favs:{title:'Избранное',tab:'favs',enter(){const l=T.filter(x=>S.fav.has(x.id));$('#favlist').innerHTML=l.length?l.map(card).join(''):`<div class="empty"><div class="big">🤍</div><h3>Пока пусто</h3><p>Нажмите ♡ на объявлении</p><button class="btn" style="margin-top:12px" data-go="home" data-testid="favs-empty-go">К ленте</button></div>`;setMain(null);}},
+ profile:{title:'Профиль',tab:'profile',enter(){renderProfile();setMain(null);}},
+ contract:{title:'Договор',parentTab:'guide',hideTabs:true,enter(){setMain(null);}},
+ safety:{title:'Безопасность',parentTab:'guide',hideTabs:true,enter(){setMain(null);}},
+ templ:{title:'Шаблоны',parentTab:'guide',hideTabs:true,enter(){tpl();setMain(null);}},
+ paywall:{title:'Подписка',hideTabs:true,enter(){renderPlans();setMain('Продолжить',()=>go('pay'));}},
+ pay:{title:'Оплата',hideTabs:true,enter(){ const p=PLANS[S.plan]; $('#pay-plan').textContent=p.n; payMethod(S.method); }},
+ wait:{title:'Проверка',hideTabs:true,enter(){setMain(null);clearTimeout(S.wt);S.wt=setTimeout(()=>{ if(tgx.state.current==='wait') go(S.failNext?'fail':'done',{replace:true}); },1400);}},
+ done:{title:'Готово',hideTabs:true,enter(){S.sub={plan:S.plan,days:PLANS[S.plan].days};$('#done-sub').textContent='Доступ на '+PLANS[S.plan].n.toLowerCase()+' активен';setMain(null);}},
+ fail:{title:'Ошибка',hideTabs:true,enter(){setMain(null);}},
+});
+function ob(){
+  const st=[
+   ['🏡','Дом в Нячанге без недели поисков','Собираем объявления из Facebook, Telegram, Marketplace и отсеиваем мусор за вас.'],
+   ['🎯','Что ищем?','Расскажите про бюджет и спальни, остальное мы поймём по ходу.'],
+   ['🔔','Когда сообщать о новом?','Один раз утром. Без спама.']][S.ob];
+  $$('#ob-steps i').forEach((i,k)=>i.classList.toggle('on',k<=S.ob));
+  let extra='';
+  if(S.ob===1) extra=`<div class="card col" style="margin-top:16px"><div class="row between"><b>Бюджет до</b><span id="ob-bv">${S.f.b} млн ₫</span></div><input type="range" id="ob-b" min="8" max="40" value="${S.f.b}" data-testid="ob-budget"><b>Спальни</b><div class="chips">${[1,2,3,4].map(n=>`<button class="chip ${S.f.r===n?'on':''}" data-act="obroom" data-n="${n}" data-testid="ob-room-${n}">${n}${n===4?'+':''}</button>`).join('')}</div></div>`;
+  $('#ob-body').innerHTML=`<div class="hero">${st[0]}</div><h1 style="text-align:center">${st[1]}</h1><p class="muted" style="text-align:center;margin-top:10px">${st[2]}</p>${extra}
+   <div class="col" style="margin-top:28px"><button class="btn block" data-act="obnext" data-testid="ob-next">${S.ob===2?'Начать':'Дальше'}</button>${S.ob<2?'<button class="btn ghost block" data-act="obskip" data-testid="ob-skip">Пропустить</button>':''}</div>`;
+  $('#ob-b')?.addEventListener('input',e=>{S.f.b=+e.target.value;$('#ob-bv').textContent=S.f.b+' млн ₫';});
+  setMain(null);
+}
+function renderFilters(){
+  $('#f-b').value=S.f.b; $('#f-bv').textContent=S.f.b+' млн ₫';
+  $('#f-rooms').innerHTML=[1,2,3,4].map(n=>`<button class="chip ${S.f.r===n?'on':''}" data-act="froom" data-n="${n}" data-testid="f-room-${n}">${n}${n===4?'+':''}</button>`).join('');
+  $('#f-term').innerHTML=[['any','Любой'],['short','1–3 мес']].map(([k,n])=>`<button class="chip ${S.f.term===k?'on':''}" data-act="fterm" data-k="${k}" data-testid="f-term-${k}">${n}</button>`).join('');
+  $('#f-must').innerHTML=[['sea','Вид на море'],['furn','Мебель']].map(([k,n])=>`<button class="chip ${S.f.must.has(k)?'on':''}" data-act="fmust" data-k="${k}" data-testid="f-must-${k}">${n}</button>`).join('');
+  $('#f-n').textContent='('+filtered().length+')';
+}
+function renderProfile(){
+  $('#plan-name').textContent=S.sub?'Доступ на '+PLANS[S.sub.plan].n.toLowerCase():'Бесплатный';
+  $('#plan-sub').textContent=S.sub?'Контакты, ниши и гайды открыты':`${S.freeC} контакта хозяев, популярные места`;
+  $('#plan-pill').textContent=S.sub?'Pro':'Free'; $('#plan-pill').className='pill '+(S.sub?'p-mint':'p-lav');
+  $('#pf-b').textContent='до '+money(S.f.b); $('#pf-r').textContent=S.f.r+'+'; $('#pf-t').textContent=S.f.term==='short'?'1–3 мес':'любой';
+  $('[data-go=paywall]').style.display=S.sub?'none':'';
+}
+function renderPlans(){
+  $('#plans').innerHTML=Object.entries(PLANS).map(([k,p])=>`<button class="card plan tap ${S.plan===k?'on':''}" data-act="plan" data-k="${k}" data-testid="plan-${k}" style="text-align:left"><div class="row between"><div><h3>${p.n}</h3><div class="muted sm">${p.sub}</div></div><b style="font-size:20px">${p.sum}</b></div>${p.hit?'<span class="pill p-peach" style="margin-top:8px">Выбор большинства</span>':''}</button>`).join('');
+}
+function payMethod(m){
+  S.method=m; $$('#paym button').forEach(b=>b.classList.toggle('on',b.dataset.m===m));
+  const p=PLANS[S.plan];
+  $('#pay-stars').style.display=m==='stars'?'':'none'; $('#pay-card').style.display=m==='card'?'':'none'; $('#pay-bybit').style.display=m==='bybit'?'':'none';
+  $('#pay-sum').textContent=m==='stars'?'⭐ '+p.stars:p.sum; $('#stars-n').textContent='⭐ '+p.stars+' Stars';
+  clearInterval(S.qt);
+  if(m==='stars'){ setMain('Оплатить ⭐ '+p.stars,()=>go('wait')); }
+  else if(m==='bybit'){ drawQR(); startQrTimer(); setMain('Я оплатил(а)',()=>go('wait')); }
+  else validateCard();
+}
+function validateCard(){
+  const ok=/^\d{16}$/.test($('#cc-n').value.replace(/\s/g,''))&&/^\d\d\/\d\d$/.test($('#cc-d').value)&&/^\d{3}$/.test($('#cc-c').value);
+  S.failNext=$('#cc-n').value.replace(/\s/g,'').endsWith('0002');
+  setMain('Оплатить '+PLANS[S.plan].sum,()=>go('wait'),{disabled:!ok});
+}
+function drawQR(){ // decorative pseudo-QR, not scannable
+  let h='',seed=7; for(let i=0;i<441;i++){ seed=(seed*9301+49297)%233280; const r=Math.floor(i/21),c=i%21;
+    const fp=(r<7&&c<7)||(r<7&&c>13)||(r>13&&c<7); const ring=fp&&(r%6==0||c%6==0||(r>1&&r<5&&c>1&&c<5)||(r<7&&c>13&&(r%6==0||(c-14)%6==0||(r>1&&r<5&&c>15&&c<19)))||(r>13&&c<7&&((r-14)%6==0||c%6==0||(r>15&&r<19&&c>1&&c<5))));
+    h+=`<i class="${fp?(ring?'k':''):(seed/233280>.5?'k':'')}"></i>`; } $('#qr').innerHTML=h; }
+function startQrTimer(){ clearInterval(S.qt); let s=900; S.qt=setInterval(()=>{ s--; const e=$('#qr-t'); if(!e||tgx.state.current!=='pay'||s<0){clearInterval(S.qt);return;} e.textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0'); },1000); }
+function drawMap(){
+  const l=filtered(); $('#mapbox').innerHTML='<div class="sea"></div>'+l.map(x=>`<button class="pin" style="left:${x.x}%;top:${x.y}%" data-act="pin" data-id="${x.id}" data-testid="pin-${x.id}">${x.p}</button>`).join('');
+  $('#mapcard').innerHTML=l.length?`<div class="muted sm" style="text-align:center">Нажмите на метку</div>`:`<div class="empty">Нет объявлений по фильтрам</div>`; setMain(null);
+}
+const MSG={vi:'Chào anh/chị, em thấy căn hộ cho thuê của anh/chị. Căn còn trống không ạ? Em muốn thuê từ 1–3 tháng, 3 phòng ngủ. Anh/chị cho em xin giá cuối, tiền cọc và điều kiện hợp đồng ạ. Cảm ơn!',
+ en:'Hello! I saw your apartment listing. Is it still available? I need 3 bedrooms for 1–3 months. Could you share the final price, deposit and contract terms? Thank you!',
+ ru:'Здравствуйте! Увидел(а) объявление о сдаче. Квартира ещё свободна? Нужны 3 спальни на 1–3 месяца. Подскажите итоговую цену, депозит и условия договора. Спасибо!'};
+function renderMsg(){ $('#msg-text').textContent=MSG[S.msgLang]; $$('#mseg button').forEach(b=>b.classList.toggle('on',b.dataset.l===S.msgLang)); }
+function tpl(){ $('#tpl-text').textContent=MSG[S.lang]; $$('#langseg button').forEach(b=>b.classList.toggle('on',b.dataset.l===S.lang)); }
+const SAMPLE='1. Арендодатель вправе расторгнуть договор в любое время без объяснения причин.\n2. Депозит в размере 3 месячных платежей не возвращается при досрочном выезде.\n3. Электричество оплачивается по тарифу 5 000 ₫/кВт·ч.\n4. Срок аренды 12 месяцев.';
+function needPro(){ if(hasPro()) return false; go('paywall'); return true; }
+Object.assign(acts,{
+ open(t,e){ if(e.target.closest('[data-act=fav]')) return; go('detail',{params:{id:t.dataset.id}}); },
+ fav(t,e){ e.stopPropagation(); const id=t.dataset.id; S.fav.has(id)?S.fav.delete(id):S.fav.add(id); toast(S.fav.has(id)?'Добавлено в избранное':'Убрано из избранного');
+   if(tgx.state.current==='detail') detail(id); else if(tgx.state.current==='favs') tgx.screens.favs.enter(); else renderFeed(); },
+ unlock(){ const x=S.cur; if(!x) return; if(hasPro()||S.unlocked.has(x.id)){ detail(x.id); return; }
+   if(S.freeC>0){ S.freeC--; S.unlocked.add(x.id); toast('Контакт открыт'); detail(x.id); renderFeed(); } else go('paywall'); },
+ unlockag(t){ const id=t.dataset.id; if(hasPro()||S.unlocked.has(id)) return;
+   if(S.freeC>0){ S.freeC--; S.unlocked.add(id); toast('Контакт открыт'); renderGuide(); } else go('paywall'); },
+ qchip(t){ const k=t.dataset.k; if(k==='all'){S.f.must.clear();S.f.term='any';} else if(k==='short'){S.f.term=S.f.term==='short'?'any':'short';} else {S.f.must.has(k)?S.f.must.delete(k):S.f.must.add(k);} renderQ();renderFeed(); },
+ obnext(){ if(S.ob<2){S.ob++;ob();} else go('home'); }, obskip(){ go('home'); },
+ obroom(t){ S.f.r=+t.dataset.n; ob(); },
+ froom(t){ S.f.r=+t.dataset.n; renderFilters(); }, fterm(t){ S.f.term=t.dataset.k; renderFilters(); },
+ fmust(t){ const k=t.dataset.k; S.f.must.has(k)?S.f.must.delete(k):S.f.must.add(k); renderFilters(); },
+ freset(){ S.f={b:40,r:1,term:'any',must:new Set()}; renderFilters(); renderQ(); renderFeed(); },
+ fapply(){ sheet('sh-filter',false); renderQ(); renderFeed(); if(tgx.state.current==='map') drawMap(); if(tgx.state.current==='profile') renderProfile(); },
+ switch(t){ t.classList.toggle('on'); },
+ gtab(t){ S.gtab=t.dataset.k; renderGuide(); },
+ pk(t){ S.pk=t.dataset.k; renderGuide(); },
+ place(t){ const p=PL.find(x=>x.id===t.dataset.id); if(!p.free&&needPro()) return; $('#gd-title').textContent=p.n; $('#gd-body').innerHTML=`<p class="muted">${esc(p.d)}</p><div class="pill p-mint" style="align-self:flex-start">${p.free?'Популярное':'Нишевое'}</div><button class="btn ghost" data-close>Закрыть</button>`; sheet('sh-guide',true); },
+ guide(t){ const g=GD.find(x=>x.id===t.dataset.id); if(!g.free&&needPro()) return; $('#gd-title').textContent=g.n; $('#gd-body').innerHTML=g.b.map(i=>`<div class="card" style="padding:12px 14px">${esc(i)}</div>`).join('')+'<button class="btn ghost" data-close>Закрыть</button>'; sheet('sh-guide',true); },
+ sample(){ $('#ctext').value=SAMPLE; },
+ check(){ const v=$('#ctext').value.trim(); if(!v){toast('Вставьте текст договора');return;}
+   const r=[]; if(/любое время|без объяснен/i.test(v)) r.push(['rose','Расторжение в любой момент','Попросите прописать срок уведомления и компенсацию при выселении.']);
+   if(/не возвращ/i.test(v)) r.push(['rose','Депозит не возвращается','Договоритесь об условиях возврата в письменном виде.']);
+   if(/кВт/i.test(v)) r.push(['butter','Тариф на электричество','Сверьте с государственным тарифом, у хозяев часто завышено.']);
+   if(/12 месяц/i.test(v)) r.push(['peach','Срок 12 месяцев','Нужен 1–3 мес: попросите короткий срок или выход через 2 мес.']);
+   $('#cres').innerHTML=(r.length?r:[['mint','Явных проблем не найдено','Всё равно прочитайте договор целиком.']]).map(([c,a,b])=>`<div class="card"><span class="pill p-${c}">${a}</span><p class="sm" style="margin-top:8px">${b}</p></div>`).join('')+'<p class="muted xs">Не юридическая консультация.</p>'; },
+ lang(t){ S.lang=t.dataset.l; tpl(); }, mlang(t){ S.msgLang=t.dataset.l; renderMsg(); },
+ copy(){ tgx.copy(MSG[S.lang]); }, mcopy(){ tgx.copy(MSG[S.msgLang]); },
+ msrc(){ sheet('sh-msg',false); toast('Открываем источник…'); },
+ plan(t){ S.plan=t.dataset.k; renderPlans(); },
+ paym(t){ payMethod(t.dataset.m); },
+ cancelwait(){ clearTimeout(S.wt); },
+ pin(t){ const x=T.find(i=>i.id===t.dataset.id); $$('#mapbox .pin').forEach(p=>p.classList.toggle('on',p===t)); $('#mapcard').innerHTML=card(x); },
+});
+document.addEventListener('input',e=>{
+  if(e.target.id==='f-b'){ S.f.b=+e.target.value; $('#f-bv').textContent=S.f.b+' млн ₫'; $('#f-n').textContent='('+filtered().length+')'; }
+  if(e.target.id==='cc-n'){ e.target.value=e.target.value.replace(/\D/g,'').slice(0,16).replace(/(.{4})/g,'$1 ').trim(); }
+  if(e.target.id==='cc-d'){ let v=e.target.value.replace(/\D/g,'').slice(0,4); e.target.value=v.length>2?v.slice(0,2)+'/'+v.slice(2):v; }
+  if(e.target.id==='cc-c'){ e.target.value=e.target.value.replace(/\D/g,'').slice(0,3); }
+  if(['cc-n','cc-d','cc-c'].includes(e.target.id)) validateCard();
+});
+document.addEventListener('click',e=>{ const t=e.target.closest('[data-sheet=sh-filter]'); if(t) renderFilters(); });
+tgx.boot('onboard');
+</script></body></html>

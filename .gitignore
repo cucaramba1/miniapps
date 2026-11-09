@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.env
+.env.local
+nhatrang/server/data/*.db*
+nhatrang/server/data/photos/
+nhatrang/server/data/overpass.json
+.pytest_cache/
+*.egg-info/
+nhatrang/server/deploy/deploy.env

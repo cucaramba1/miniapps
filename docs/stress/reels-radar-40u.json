@@ -1,0 +1,25 @@
+{
+ "app": "reels-radar",
+ "users": 40,
+ "concurrency": 8,
+ "actionsPerBot": 60,
+ "seed": 5,
+ "totalActions": 2393,
+ "secs": 37,
+ "actionsPerSec": 64.7,
+ "latencyMs": {
+  "p50": 24,
+  "p95": 33,
+  "p99": 41,
+  "max": 312
+ },
+ "peakChromeRssMB": 2239,
+ "slowActions": 0,
+ "noTargets": 7,
+ "invariantViolations": 0,
+ "jsErrors": 0,
+ "crashes": 0,
+ "invariantSamples": [],
+ "errorSamples": [],
+ "crashSamples": []
+}
